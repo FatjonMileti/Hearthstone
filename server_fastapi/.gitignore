@@ -1,0 +1,57 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Env & secrets (never commit live configs or keys)
+.env
+.env.*
+!.env.example
+certs/
+*.pem
+*.key
+
+# Local runtime data
+uploads/*
+!uploads/.gitkeep
+logs/
+*.log
+docs/
+
+# Build / dist
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Test / lint caches & reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+TEST*.xml
+junit*.xml
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+TODO.md
+PORTING_NOTES.md
+AGENTS.md

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "prettier": "^2.5.0",
+    "tslint": "^6.1.3"
+  }
+}
