@@ -51,7 +51,12 @@ line-length = 100
 select = ["E", "F", "I", "UP", "B", "ASYNC", "S"]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["S101"]
+# Collection-name constants and JWT field names trip S105/S106 heuristics;
+# none of these are real hardcoded secrets (secrets come from env).
+"tests/**" = ["S101", "S105", "S106"]
+"app/models/__init__.py" = ["S105"]
+"app/core/security.py" = ["S105", "S106"]
+"app/services/storage/*.py" = ["S105"]
 
 [tool.mypy]
 python_version = "3.12"

@@ -1,4 +1,4 @@
-# LOST FISH
+# Hearthstone
 
 ### We have both frontend and backend in the same directory
 
@@ -17,7 +17,7 @@ Client is running by default with `react-scripts` and Server with `nodemon`.
 
 ## Client
 
-# Lost Fish Dashboard
+# Hearthstone Dashboard
 
 ## VSCode Development requirements
 
@@ -35,7 +35,7 @@ from https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 - [Create React App](https://github.com/facebook/create-react-app)
 - React Router
 
-# Backend (Lost Fish API)
+# Backend (Hearthstone API)
 
 ```sh
 npm i
