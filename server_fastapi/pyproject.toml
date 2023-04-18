@@ -57,6 +57,8 @@ select = ["E", "F", "I", "UP", "B", "ASYNC", "S"]
 "app/models/__init__.py" = ["S105"]
 "app/core/security.py" = ["S105", "S106"]
 "app/services/storage/*.py" = ["S105"]
+"app/services/account_service.py" = ["S105", "S106"]
+"app/seed.py" = ["S105"]
 
 [tool.mypy]
 python_version = "3.12"

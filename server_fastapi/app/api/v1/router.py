@@ -1,13 +1,18 @@
 """API router assembly. Port of server_node/src/api/index.ts mount table.
 
-Feature routers land in Phase 2+ tasks; this file keeps the mount table so
-prefixes never drift. Routers with global authorize() in Node (chat,
-notification, offer) get their dependency applied at include time here.
+Prefixes never drift from this file. Routers with global authorize() in Node
+(chat, notification, offer) get their dependency applied at include time here
+(when those routers land in Phase 4).
 """
 
 from fastapi import APIRouter
 
+from app.api.v1.account import router as account_router
+from app.api.v1.user import router as user_router
+
 api_router = APIRouter(tags=["api"])
+api_router.include_router(account_router)
+api_router.include_router(user_router)
 
 
 @api_router.get("/_ping", include_in_schema=False)
