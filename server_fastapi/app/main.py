@@ -18,8 +18,9 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from app.api.v1.router import api_router
 from app.api.web import web_router
 from app.core.config import get_settings
-from app.core.db import close_db, connect_db
+from app.core.db import close_db, connect_db, get_database
 from app.core.logging_setup import access_log_middleware, configure_file_logging
+from app.services.email_service import EmailService
 
 
 async def _http_exception_handler(request: Request, exc: StarletteHTTPException) -> JSONResponse:
@@ -56,6 +57,13 @@ def create_app() -> FastAPI:
     async def lifespan(app: FastAPI):  # type: ignore[no-untyped-def]
         if settings.stage != "test":
             await connect_db(settings.db_connection_string)
+            app.state.db = get_database(settings.mongo_db_name)
+        EmailService.get_instance().configure(settings)
+        # Port of app.ts MailService init: Ethereal in dev, SMTP in stage/prod.
+        if settings.stage == "development":
+            await EmailService.get_instance().create_local_connection()
+        elif settings.stage in ("stage", "production"):
+            EmailService.get_instance().create_connection()
         configure_file_logging("logs")
         yield
         await close_db()
