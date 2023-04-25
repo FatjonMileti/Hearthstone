@@ -104,6 +104,17 @@ class Settings(BaseSettings):
     def twitter_redirect_url(self) -> str:
         return f"{self.absolute_url}/api/account/login-twitter-callback"
 
+    @property
+    def mongo_db_name(self) -> str:
+        """Database name: explicit DB_DATABASE wins, else last path segment of
+        DB_CONNECTION_STRING (Node passes dbName separately to mongoose)."""
+        if self.db_database:
+            return self.db_database
+        path = self.db_connection_string.split("?", 1)[0].rstrip("/").rsplit("/", 1)
+        if len(path) == 2 and path[1]:
+            return path[1]
+        return "backend-app"
+
     def legacy_use_azure_storage(self) -> bool:
         """Accept Node's typo'd env key USE_AZURE_BLOB_BACKET as well."""
         import os
