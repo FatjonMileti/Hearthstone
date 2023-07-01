@@ -90,6 +90,9 @@ class Settings(BaseSettings):
 
     image_generator_key: str = Field(default="test", alias="IMAGE_GENERATOR_KEY")
     image_generator_secret: str = Field(default="test", alias="IMAGE_GENERATOR_SECRET")
+    diffusionmaster_ws_url: str = Field(
+        default="wss://ws-api.diffusionmaster.com/v1/", alias="DIFFUSIONMASTER_WS_URL"
+    )
 
     @property
     def stage(self) -> Stage:
