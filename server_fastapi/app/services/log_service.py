@@ -41,7 +41,7 @@ def _oid(value: str | ObjectId | None) -> ObjectId | None:
 async def write_login_log(
     db: Any,
     *,
-    user_id: str | ObjectId,
+    user_id: str | ObjectId | None,
     action: LoginAction,
     info: Any = None,
     log_expiration_days: int = 90,
@@ -61,7 +61,7 @@ async def write_entity_log(
     db: Any,
     *,
     collection: str,
-    user_id: str | ObjectId,
+    user_id: str | ObjectId | None,
     action: LogAction,
     ref: str | ObjectId | None = None,
     info: Any = None,
