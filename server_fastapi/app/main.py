@@ -20,6 +20,7 @@ from app.api.web import web_router
 from app.core.config import get_settings
 from app.core.db import close_db, connect_db, get_database
 from app.core.logging_setup import access_log_middleware, configure_file_logging
+from app.realtime import create_sio_server, register_handlers
 from app.services.email_service import EmailService
 
 
@@ -112,6 +113,12 @@ def create_app() -> FastAPI:
     app.include_router(web_router)  # GET / (+ /form in Task 22)
     app.include_router(api_router, prefix="/api")
 
+    # Realtime (port of bin/www.ts socket.io setup): handlers resolve the live
+    # db per event so tests can swap app.state.db with a mock.
+    sio = create_sio_server(settings)
+    app.state.sio_users = register_handlers(sio, lambda: app.state.db)
+    app.state.sio = sio
+
     # 7/8. error handlers
     app.add_exception_handler(StarletteHTTPException, _http_exception_handler)  # type: ignore[arg-type]
     app.add_exception_handler(Exception, _unhandled_exception_handler)
@@ -126,3 +133,10 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+
+# Production entrypoint with websockets (port of bin/www.ts http+socket.io server).
+# `app` keeps serving REST (and is what tests use); run uvicorn against
+# `app.main:socket_app` in stage/prod to enable Socket.IO.
+import socketio as _socketio  # noqa: E402
+
+socket_app = _socketio.ASGIApp(app.state.sio, other_asgi_app=app)

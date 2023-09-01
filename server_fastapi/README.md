@@ -31,5 +31,3 @@ python -m app.cli create-agent
 ```bash
 docker compose up   # api + mongo + redis
 ```
-
-See `AGENTS.md` (agent rules), `TODO.md` (task plan), `PORTING_NOTES.md` (decisions/quirks).
