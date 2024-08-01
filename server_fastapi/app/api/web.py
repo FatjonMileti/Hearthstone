@@ -65,7 +65,15 @@ async def post_form(
     except BadSignature:
         return HTMLResponse("invalid csrf", status_code=403)
     response = HTMLResponse(_form_html(favoriteColor, _signer(request).dumps("form")))
+    # Secure cookie only behind HTTPS (Node used secure:true unconditionally,
+    # which breaks plain-http local dev — we set it only outside development).
+    from app.core.config import get_settings
+
     response.set_cookie(
-        "fsdlm_color", _signer(request).dumps(favoriteColor), httponly=True, samesite="lax"
+        "fsdlm_color",
+        _signer(request).dumps(favoriteColor),
+        httponly=True,
+        samesite="lax",
+        secure=get_settings().stage in ("stage", "production"),
     )
     return response

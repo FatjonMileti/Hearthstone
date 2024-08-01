@@ -6,6 +6,7 @@ Node order replicated (adapted to FastAPI):
 6. routers (/ + /api) -> 7. JSON 404 -> 8. JSON error handler {message, stack?}.
 """
 
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
@@ -22,6 +23,22 @@ from app.core.db import close_db, connect_db, get_database
 from app.core.logging_setup import access_log_middleware, configure_file_logging
 from app.realtime import create_sio_server, register_handlers
 from app.services.email_service import EmailService
+
+logger = logging.getLogger("hearthstone.startup")
+
+
+def _warn_default_secrets() -> None:
+    import os
+
+    for key in ("JWT_SECRET", "REFRESH_SECRET", "SESSION_SECRET"):
+        value = os.getenv(key, "")
+        if not value or value in (
+            "change-me",
+            "test-secret",
+            "test-refresh-secret",
+            "test-session-secret",
+        ):
+            logger.warning("%s looks default/test-only — set a strong value in stage/prod", key)
 
 
 async def _http_exception_handler(request: Request, exc: StarletteHTTPException) -> JSONResponse:
@@ -118,6 +135,11 @@ def create_app() -> FastAPI:
     sio = create_sio_server(settings)
     app.state.sio_users = register_handlers(sio, lambda: app.state.db)
     app.state.sio = sio
+
+    from app.core.rate_limit import apply_rate_limiting
+
+    apply_rate_limiting(app)
+    _warn_default_secrets()
 
     # 7/8. error handlers
     app.add_exception_handler(StarletteHTTPException, _http_exception_handler)  # type: ignore[arg-type]
