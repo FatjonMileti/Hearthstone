@@ -1,5 +1,4 @@
-"""App factory. Port of server_node/src/app.ts middleware order + error handling.
-
+"""
 Node order replicated (adapted to FastAPI):
 1. gzip (compression) -> 2. CORS open * -> 3. security headers (helmet subset, no CSP)
 4. access log w/ body masking -> 5. sessions stub (API is stateless JWT; cookie only for /form demo)

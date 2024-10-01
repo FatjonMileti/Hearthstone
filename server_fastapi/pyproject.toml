@@ -1,7 +1,7 @@
 [project]
 name = "hearthstone-api-fastapi"
 version = "0.0.1"
-description = "FastAPI port of server_node (Lost Fish / Hearthstone API)"
+description = "FastAPI port of Hearthstone API"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115",

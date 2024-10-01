@@ -1,5 +1,3 @@
-"""Central settings. Port of server_node/src/config/{index,local,stage,prod}.ts."""
-
 from functools import lru_cache
 from typing import Literal
 
@@ -16,7 +14,6 @@ class Settings(BaseSettings):
     behind_proxy: bool = Field(default=True, alias="BEHIND_PROXY")
     port: int = Field(default=3000, alias="PORT")
 
-    # Storage selection mirrors server_node/src/api/index.ts:
     # Azure when USE_AZURE_BLOB_BACKET=true, else S3 when USE_S3_BUCKET=true, else local.
     # NOTE: Node env key has typo "BACKET" — we accept both spellings.
     use_azure_blob_bucket: bool = Field(default=False, alias="USE_AZURE_BLOB_BUCKET")

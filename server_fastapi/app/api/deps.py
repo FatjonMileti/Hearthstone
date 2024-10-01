@@ -1,13 +1,3 @@
-"""Shared request dependencies.
-
-Ports:
-- server_node/src/middleware/paging.ts            -> paging_params()
-- server_node/src/middleware/object-id.validator.ts -> validate_object_id()
-- server_node/src/middleware/authorize.ts         -> get_current_user()
-- server_node/src/middleware/tokenAuthorize.ts   -> verify_service_token()
-- server_node/src/middleware/ability.middleware.ts -> require_ability()
-"""
-
 from collections.abc import Callable
 from typing import Annotated, Any
 

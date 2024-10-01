@@ -1,11 +1,3 @@
-"""Web (non-API) routes. Port of server_node/src/routes/index.ts + views/*.hbs.
-
-GET / keeps the JSON title stub. /form renders the color form with a signed
-CSRF token (itsdangerous, session-secret) and persists the color in a signed
-cookie — the signed-cookie stand-in for express-session+Mongo, which Node used
-only for this demo.
-"""
-
 import html
 
 from fastapi import APIRouter, Form, Request

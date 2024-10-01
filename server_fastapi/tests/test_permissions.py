@@ -1,4 +1,3 @@
-"""Phase 1 Task 05: CASL matrix parity (server_node/src/casl/casl.ts)."""
 
 import pytest
 

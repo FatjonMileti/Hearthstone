@@ -1,14 +1,3 @@
-"""Index bootstrap. Ports TTL/index behavior from server_node schemas:
-
-- login.log / user.log / match.log / property.log: TTL on expiresAt
-  (expiresAt defaults to now + LOG_EXPIRATION_DAYS, see log_service).
-- revoked.token / used.refresh.token: TTL on expiresAt + index on token.
-- docusign.token: index on token.
-- file: index on key/filename.
-- user: unique-ish index on email (Node: indexed, not unique — keep non-unique
-  to preserve parity; service layer enforces flow).
-"""
-
 from typing import Any
 
 from app import models

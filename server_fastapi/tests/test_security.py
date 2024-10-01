@@ -1,5 +1,3 @@
-"""Phase 1 Task 04: password + JWT parity with server_node."""
-
 import time
 
 from app.core.security import (

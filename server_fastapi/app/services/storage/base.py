@@ -1,5 +1,3 @@
-"""Storage interface. Port of server_node/src/api/File/file.interface.ts."""
-
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Any

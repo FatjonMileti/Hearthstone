@@ -1,5 +1,3 @@
-"""Phase 0 smoke tests: app boots, JSON error shapes match server_node/src/app.ts."""
-
 from httpx import AsyncClient
 
 

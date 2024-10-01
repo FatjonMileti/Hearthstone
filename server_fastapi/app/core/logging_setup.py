@@ -1,5 +1,4 @@
-"""Access logging. Port of server_node/src/app.log.ts.
-
+"""
 Node morgan format (bodies masked on /login and /register):
   [:date[iso]] :remote-addr :remote-user :method :url HTTP/:http-version
   :status :res[content-length] :req-body - :response-time ms

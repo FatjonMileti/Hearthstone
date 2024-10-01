@@ -1,5 +1,4 @@
-"""RBAC. Port of server_node/src/casl/{casl,casl.interface}.ts.
-
+"""
 Matrix (identical to Node defineAbilitiesFor):
 - Agent: manage all
 - Tenant (=Client in Node Role enum): manage own User + Chat + Client + Criteria +

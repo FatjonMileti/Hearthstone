@@ -1,4 +1,4 @@
-"""Collection names — must match Mongoose model names in server_node exactly.
+"""Collection names.
 
 Central registry so routers/services never hardcode a collection string.
 Attribute/Condition are listed but intentionally unmounted (see PORTING_NOTES).

@@ -1,10 +1,3 @@
-"""User domain service. Port of server_node/src/api/User/user.service.ts
-+ user.schema.ts calculateProfileCompleteness.
-
-All functions take a Motor/mongomock database handle as first arg.
-Field names match the Mongoose schemas exactly.
-"""
-
 from datetime import UTC, datetime
 from typing import Any
 from uuid import uuid4

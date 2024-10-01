@@ -1,9 +1,3 @@
-"""API router assembly. Port of server_node/src/api/index.ts mount table.
-
-Prefixes never drift from this file. Routers with global authorize() in Node
-(chat, notification, offer) declare it at router level in their modules.
-"""
-
 from fastapi import APIRouter
 
 from app.api.v1.account import router as account_router

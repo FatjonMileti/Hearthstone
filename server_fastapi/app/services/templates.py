@@ -1,10 +1,3 @@
-"""Email templates. Behavior ports of server_node/src/utils/templates/*.ts.
-
-Link contracts (must not change — the React client depends on them):
-- verify email:  <FRONTEND_URL>/activate-account/<confirmation_token>
-- reset/change:  <FRONTEND_URL>?resetPasswordToken=<token>
-"""
-
 from app.core.config import Settings
 
 

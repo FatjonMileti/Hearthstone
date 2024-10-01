@@ -1,10 +1,3 @@
-"""Entity logs. Port of server_node/src/data/logs.ts usage.
-
-Collections: login.log (Login|Refresh|Logout|login_google), user.log / match.log /
-property.log (create|read|update|delete + ref + info). expiresAt defaults to
-now + LOG_EXPIRATION_DAYS with a TTL index (expireAfterSeconds=0).
-"""
-
 from datetime import UTC, datetime, timedelta
 from enum import StrEnum
 from typing import Any

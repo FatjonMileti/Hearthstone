@@ -1,5 +1,4 @@
-"""Seed entrypoint. Port of server_node/src/seeders/index.ts (`npm run seed`).
-
+"""
 Clears and reseeds users -> properties -> criteria like the Node runner.
 faker data mirrors user/property/criteria seeders (default role accounts
 hearthstone@hearthstone.com / Hearthstone1234 plus generated docs).

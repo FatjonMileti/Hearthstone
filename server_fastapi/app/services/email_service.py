@@ -1,13 +1,3 @@
-"""Email service. Port of server_node/src/utils/email/index.ts.
-
-- stage=development -> Ethereal test account (nodemailer.createTestAccount equivalent:
-  we request a fresh ethereal account via https://api.nodemailer.com/user when available;
-  falls back to localhost:1025 / mailhog so tests never need network).
-- stage=stage/production -> SMTP from EMAIL_HOST/PORT/USER/PASS with SSLv3 ciphers note.
-- From header always config.userEmail (Node behavior); send_mail() never raises
-  (Node catches + console.logs) — it returns the info dict or None.
-"""
-
 import logging
 import smtplib
 from dataclasses import dataclass

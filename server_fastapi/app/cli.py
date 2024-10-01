@@ -1,5 +1,4 @@
-"""Dev CLI. Port of server_node/cli.ts (`npm run cli`).
-
+"""
 Prompts for email/password/first/last (min length 3, like the joi rules in cli.ts),
 bcrypt-12 hashes, and creates an enabled Agent user.
 """
@@ -49,7 +48,7 @@ def create_agent(
     first_name: str = typer.Option("", help="First name (prompted when empty)"),
     last_name: str = typer.Option("", help="Last name (prompted when empty)"),
 ) -> None:
-    """Create an enabled Agent user (port of cli.ts)."""
+    """Create an enabled Agent user."""
     from app.core.config import get_settings
     from app.core.db import close_db, connect_db, get_client
 

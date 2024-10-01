@@ -1,6 +1,4 @@
-"""Storage factory. Mirrors server_node/src/api/index.ts selection:
-
-Azure when USE_AZURE_BLOB_BUCKET (or legacy typo USE_AZURE_BLOB_BACKET) is true,
+"""Azure when USE_AZURE_BLOB_BUCKET (or legacy typo USE_AZURE_BLOB_BACKET) is true,
 else S3 when USE_S3_BUCKET (or legacy USE_S3_BACKET) is true, else local.
 """
 

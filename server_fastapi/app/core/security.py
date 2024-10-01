@@ -1,4 +1,4 @@
-"""Auth primitives. Port of server_node User/user.helpers.ts + middleware/authorize.ts
+"""Auth primitives.
 + Account/services/account.service.ts generateTokens/verify logic.
 
 - bcrypt cost 12, is_password_strong messages identical to Node.

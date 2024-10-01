@@ -1,4 +1,4 @@
-"""Mongo connection. Port of server_node/src/data/index.ts (dbConnect)."""
+"""Mongo connection."""
 
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
 
