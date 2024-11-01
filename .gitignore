@@ -5,16 +5,13 @@
 
 # Node artifact files
 node_modules/
-server_node/
-server_node/node_modules/
-server_node/build/
-server_node/dist/
-server_node/docs/
-server_node/.idea/
 
-client/
-client/node_modules/
-client/build/
+client_react/
+client_react/node_modules/
+client_react/build/
+
+client_nextjs/node_modules/
+client_nextjs/build/
 
 # Compiled Java class files
 *.class
