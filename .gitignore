@@ -12,6 +12,7 @@ client_react/build/
 
 client_nextjs/node_modules/
 client_nextjs/build/
+client_nextjs/TODO.md
 
 # Compiled Java class files
 *.class
@@ -58,3 +59,5 @@ Thumbs.db
 # .env file
 .env
 
+client_nextjs/TODO.md
+client_nextjs/TODO.md
