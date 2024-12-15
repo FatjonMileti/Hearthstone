@@ -1,15 +1,15 @@
-import { createTheme, ThemeOptions } from '@mui/material/styles';
+import { createTheme } from '@mui/material';
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
-    mobile: true;
+    mobile: true; // adds the `mobile` breakpoint
     tablet: true;
     laptop: true;
     desktop: true;
   }
 }
 
-const themeOptions: ThemeOptions = {
+export const theme = createTheme({
   breakpoints: {
     values: {
       mobile: 0,
@@ -20,9 +20,7 @@ const themeOptions: ThemeOptions = {
       sm: 600,
       md: 900,
       lg: 1200,
-      xl: 1536,
-    },
-  },
-};
-
-export const theme = createTheme(themeOptions);
+      xl: 1536
+    }
+  }
+});
