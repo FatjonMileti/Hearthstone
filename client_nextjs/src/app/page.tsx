@@ -1,3 +1,3 @@
 export default function HomePage() {
-  return <main>Next.js scaffold running — App Router chosen</main>;
+  return <main>Home (public or logged-in based on auth)</main>;
 }
