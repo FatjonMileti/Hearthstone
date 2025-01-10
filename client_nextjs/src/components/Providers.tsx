@@ -3,6 +3,7 @@
 import { ThemeProvider } from '@mui/material';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { CookiesProvider } from 'react-cookie';
+import SocketProvider from './SocketProvider';
 import { theme } from '../theme/theme';
 
 const queryClient = new QueryClient();
@@ -12,7 +13,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     <ThemeProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <CookiesProvider>
-          {children}
+          <SocketProvider>{children}</SocketProvider>
         </CookiesProvider>
       </QueryClientProvider>
     </ThemeProvider>
