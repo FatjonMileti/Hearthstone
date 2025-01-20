@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, devtools } from 'zustand/middleware';
 import axios from '../utils/axios';
-import { IUser_Documents, UserNotifications } from '../pages/MyAccount/user.interface';
+import { IUser_Documents, UserNotifications } from '../view-components/MyAccount/user.interface';
 
 interface ProfileBase {
   id: string;

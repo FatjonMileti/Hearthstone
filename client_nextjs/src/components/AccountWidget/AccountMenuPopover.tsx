@@ -1,6 +1,6 @@
 import { styled } from '@mui/system';
 import { useProfileStore } from '../../globalState/profile.tsx';
-import { submenus, tenantSubmenu } from '../../pages/MyAccount/MyAccount.tsx';
+import { submenus, tenantSubmenu } from '../../view-components/MyAccount/MyAccount.tsx';
 import { Popover, PopoverProps } from '../Popover.tsx';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AccountItem } from '../AccountItem.tsx';
@@ -21,13 +21,13 @@ export const AccountMenuPopover = styled(
 
     const logOut = async () => {
       try {
-        await request(userStore.auth.access_token).post('/api/account/logout', {
-          refresh_token: userStore.auth.refresh_token
+        await request(userStore.auth!.access_token).post('/api/account/logout', {
+          refresh_token: userStore.auth!.refresh_token
         });
       } catch (err) {
         console.log(err);
       } finally {
-        userStore.set((user: any) => ({ ...user, auth: null, userDetails: null, ability: null }));
+        userStore.set({ auth: null, userDetails: null, ability: null });
         profileStore.reset();
         navigate('/');
       }

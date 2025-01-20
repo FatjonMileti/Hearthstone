@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 import config from '../config';
-import SocketContext from './SocketContext';
+import SocketContext from '../context/SocketContext';
 import { useUserStore } from '../globalState/user';
 
 export default function SocketProvider({ children }: { children: React.ReactNode }) {

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, devtools } from 'zustand/middleware';
 import axios from '../utils/axios';
-import { ApiCriteriaDocumentType } from '../pages/SetCriteria/criteria.types';
+import { ApiCriteriaDocumentType } from '../view-components/SetCriteria/criteria.types';
 import { SetStateAction } from 'react';
 
 type CriteriaType = Partial<ApiCriteriaDocumentType>;
