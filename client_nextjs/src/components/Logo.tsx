@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/system';
 
-import LogoHearthstoneColored from '../assets/svg/LogoHearthstoneColored.svg';
+import LogoHearthstoneColored from '../assets/svg/LogoLostFishColored.svg';
 
 export interface LogoProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
 

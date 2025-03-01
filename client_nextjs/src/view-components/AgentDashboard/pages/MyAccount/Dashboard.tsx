@@ -1,9 +1,6 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 
-import cloud from './images/cloud.png';
-import property from './images/property.png';
-
 export const Dashboard = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={`dashboard ${className}`}>
@@ -29,15 +26,6 @@ export const Dashboard = styled(({ className }: HTMLAttributes<HTMLDivElement>) 
 
     .transaction-agreement {
       background-color: #c0daff;
-      border-radius: 16px;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      background-image: url('${cloud}');
-      background-repeat: no-repeat;
-      background-position-x: right;
-      grid-area: a;
-
-      .left-part {
         padding: 24px;
         .title {
           font-size: 18px;
@@ -66,7 +54,6 @@ export const Dashboard = styled(({ className }: HTMLAttributes<HTMLDivElement>) 
       }
 
       .starred-property {
-        background-image: url('${property}');
         border-radius: 16px;
         display: flex;
         aspect-ratio: 1.35 / 1;

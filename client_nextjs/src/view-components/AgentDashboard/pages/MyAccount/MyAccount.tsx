@@ -29,12 +29,12 @@ export const MyAccount = styled(({ className }: HTMLAttributes<HTMLDivElement>) 
 
   const logOut = async () => {
     try {
-      await request(userStore.auth.access_token).post('/api/account/logout', {
-        refresh_token: userStore.auth.refresh_token
+      await request(userStore.auth!.access_token).post('/api/account/logout', {
+        refresh_token: userStore.auth!.refresh_token
       });
     } catch (err) {
     } finally {
-      userStore.set((user: any) => ({ ...user, auth: null, userDetails: null, ability: null }));
+      userStore.set({ auth: null, userDetails: null, ability: null });
       navigate('/');
     }
   };

@@ -2,7 +2,7 @@ import React from 'react';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 
-import HearthstoneLogoColored from '../../assets/svg/HearthstoneLogo.svg';
+import LogoLostFishColored from '../../assets/svg/LogoLostFishColored.svg';
 import { Label } from '../../components';
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -15,7 +15,7 @@ export const Header = styled(
     const navigate = useNavigate();
     return (
       <div className={`header ${className}`}>
-        <img className='logo' src={HearthstoneLogoColored} alt='Hearthstone logo' onClick={() => navigate('/')} />
+        <img className='logo' src={LogoLostFishColored} alt='Hearthstone logo' onClick={() => navigate('/')} />
 
         <div className='menu-desktop'></div>
 

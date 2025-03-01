@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Typography } from '../../components/Typography.tsx';
 
-import HearthstoneFullLogoBlack from '../../assets/svg/HearthstoneLogo.svg';
+import HearthstoneFullLogoBlack from '../../assets/svg/LogoLostFishColored.svg';
 
 import { Link } from '../../components/Link.tsx';
 

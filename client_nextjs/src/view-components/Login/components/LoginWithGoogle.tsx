@@ -1,3 +1,5 @@
+'use client';
+
 import { useCallback } from 'react';
 import config from '../../../config';
 import { LoginSocialGoogle, IResolveParams } from 'reactjs-social-login';

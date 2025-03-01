@@ -10,7 +10,7 @@ import { ShowGlobalLoading } from '../../../components/index.ts';
 import { PropertyCard } from '../../../components/index.ts';
 
 import { useSuggestedPropertiesWithoutAccount } from './useSuggestedPropertiesWithoutAccount.tsx';
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.ts';
 
 import backgroundImg from '../../Home/forest.jpeg';
 import { useCriteriaWithoutAccountStore } from '../../../globalState/useCriteriaWithoutAccount.ts';

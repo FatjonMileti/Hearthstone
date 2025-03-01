@@ -1,3 +1,5 @@
+'use client';
+
 import { styled } from '@mui/system';
 import React from 'react';
 import * as yup from 'yup';
