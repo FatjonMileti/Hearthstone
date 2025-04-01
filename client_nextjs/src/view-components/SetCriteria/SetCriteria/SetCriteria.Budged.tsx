@@ -13,7 +13,7 @@ import { Label } from '../../../components/Label';
 import { Select } from '../../../components/Select/Select';
 
 import { BudgetFor, ContractDetail, CreditScore } from '../criteria.contants';
-import { CriteriaFormType } from './criteria.types';
+import { CriteriaFormType } from '../criteria.types';
 import ThirdfortLogo from './Thirdfort.png'
 
 interface SetCriteriaBudgetProps extends HTMLMotionProps<'div'> {

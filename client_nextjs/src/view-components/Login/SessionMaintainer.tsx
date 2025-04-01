@@ -5,7 +5,7 @@ import { decodeJWT } from './LoginModal';
 import { ShowGlobalLoading } from '../../components';
 import { useUserStore } from '../../globalState/user';
 import { useProfileStore } from '../../globalState/profile';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../compat/router';
 
 export const refreshToken = async (debug = false) => {
   if (debug) console.log('Refreshing token...');

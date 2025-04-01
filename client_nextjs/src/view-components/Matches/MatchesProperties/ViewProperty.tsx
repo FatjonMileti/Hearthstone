@@ -1,20 +1,20 @@
 import { styled } from '@mui/system';
-import { Typography } from '../../../components/index.ts';
-import { Modal, ModalProps } from '../../../components/Modal.tsx';
+import { Typography } from '../../../components/index';
+import { Modal, ModalProps } from '../../../components/Modal';
 
-import { Icon } from '../../../components/index.ts';
+import { Icon } from '../../../components/index';
 import { useState } from 'react';
-import { Map } from '../../../components/Map.tsx';
+import { Map } from '../../../components/Map';
 import classNames from 'classnames';
-import { Carousel } from './MatchesProperties.Carousel.tsx';
-import { NearestThings } from './ViewProperty.NearestThings.tsx';
-import { avatars } from '../../HomeLoggedIn/avatars.tsx';
+import { Carousel } from './MatchesProperties.Carousel';
+import { NearestThings } from './ViewProperty.NearestThings';
+import { avatars } from '../../HomeLoggedIn/avatars';
 
-import { AreaUnit } from '../../Properties/NewProperty/property.constants.ts';
-import { SuggestedPropertyType } from '../matches.type.ts';
-import { Avatar, Label } from '../../../components/index.ts';
+import { AreaUnit } from '../../Properties/NewProperty/property.constants';
+import { SuggestedPropertyType } from '../matches.type';
+import { Avatar, Label } from '../../../components/index';
 import verified from '../../MyAccount/images/verified.svg';
-import { RoundAction } from '../../../components/RoundAction.tsx';
+import { RoundAction } from '../../../components/RoundAction';
 
 interface ViewPropertyModalProps extends ModalProps {
   propertyMatch: SuggestedPropertyType;

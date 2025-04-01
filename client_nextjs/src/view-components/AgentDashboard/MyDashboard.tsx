@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from '../../compat/router';
 import { AgentDashboard } from './AgentDashboard';
 import { Agreement } from '../Agreement/Agreement';
 import { AllProperties } from './AllProperties';

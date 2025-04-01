@@ -1,15 +1,16 @@
-import { Typography } from '../../../components/index.ts';
+type IGridState = any;
+import { Typography } from '../../../components/index';
 import React, { HTMLAttributes } from 'react';
-import { useUserStore } from '../../../globalState/user.tsx';
-import axios from '../../../utils/axios.ts';
-import config from '../../../config.ts';
-import { Button } from '../../../components/index.ts';
+import { useUserStore } from '../../../globalState/user';
+import axios from '../../../utils/axios';
+import config from '../../../config';
+import { Button } from '../../../components/index';
 
-import { IRoom } from '../messages.interface.ts';
+import { IRoom } from '../messages.interface';
 import { styled } from '@mui/system';
 import classNames from 'classnames';
-import { Icon } from '../../../components/index.ts';
-import { Role } from '../../../enums.ts';
+import { Icon } from '../../../components/index';
+import { Role } from '../../../enums';
 
 const state: IGridState = {
   loading: true,

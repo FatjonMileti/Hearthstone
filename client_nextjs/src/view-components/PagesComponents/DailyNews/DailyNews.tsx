@@ -2,16 +2,16 @@ import { styled } from '@mui/system';
 import classNames from 'classnames';
 import { HTMLAttributes, useRef } from 'react';
 
-import { RoundAction } from '../../../components/RoundAction.tsx';
-import { NewsCard } from './NewsCard.tsx';
+import { RoundAction } from '../../../components/RoundAction';
+import { NewsCard } from './NewsCard';
 
 import news1 from './images/news1.png';
 import news2 from './images/news2.png';
 import news3 from './images/news3.png';
 import news4 from './images/news4.png';
 
-import { Typography } from '../../../components/Typography.tsx';
-import { Icon } from '../../../components/Icon.tsx';
+import { Typography } from '../../../components/Typography';
+import { Icon } from '../../../components/Icon';
 
 export interface News {
   image: string;

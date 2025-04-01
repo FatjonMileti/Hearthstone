@@ -4,20 +4,20 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import { Typography } from '../../components';
-import { Button } from '../../components';
-import { TextField } from '../../components';
-import { Textarea } from '../../components/Textarea';
-import { Icon } from '../../components';
-import { ShowGlobalLoading } from '../../components';
-import { Avatar } from '../../components';
-import axios from '../../utils/axios';
-import { avatars } from '../HomeLoggedIn/avatars';
-import { useUserStore } from '../../globalState/user';
-import { useProfileStore } from '../../globalState/profile';
+import { Typography } from '../../../components';
+import { Button } from '../../../components';
+import { TextField } from '../../../components';
+import { Textarea } from '../../../components/Textarea';
+import { Icon } from '../../../components';
+import { ShowGlobalLoading } from '../../../components';
+import { Avatar } from '../../../components';
+import axios from '../../../utils/axios';
+import { avatars } from '../../HomeLoggedIn/avatars';
+import { useUserStore } from '../../../globalState/user';
+import { useProfileStore } from '../../../globalState/profile';
 import { AccountSettings } from './AccountSettings';
-import { Select } from '../../components/Select/Select';
-import { Label } from '../../components';
+import { Select } from '../../../components/Select/Select';
+import { Label } from '../../../components';
 // import { NotificationSettings } from './NotificationSettings';
 
 const userSchema = yup.object().shape({
@@ -59,7 +59,7 @@ export const ProfileDetails = styled(({ className }: HTMLAttributes<HTMLDivEleme
   const { userDetails, auth } = useUserStore();
 
   const profileDetailsForm = useForm<ProfileDetails>({
-    resolver: yupResolver(userSchema),
+    resolver: yupResolver(userSchema) as any,
     defaultValues: {
       first_name: '',
       last_name: '',

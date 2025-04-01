@@ -1,8 +1,8 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 import { motion } from 'framer-motion';
-import { Icon } from '../../../components/Icon.tsx';
-import { RoundAction } from '../../../components/RoundAction.tsx';
+import { Icon } from '../../../components/Icon';
+import { RoundAction } from '../../../components/RoundAction';
 
 export interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
   indexStore?: [number, (i: number) => void];

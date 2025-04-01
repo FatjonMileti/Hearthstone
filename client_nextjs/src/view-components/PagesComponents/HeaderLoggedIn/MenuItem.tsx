@@ -1,8 +1,8 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { IconProps, Icon } from '../../../components/Icon.tsx';
-import { MenuCounter } from '../../../components/index.ts';
+import { IconProps, Icon } from '../../../components/Icon';
+import { MenuCounter } from '../../../components/index';
 
 interface MenuItemProps extends HTMLAttributes<HTMLDivElement> {
   label: string;

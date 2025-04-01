@@ -36,7 +36,7 @@ export const NewRentingContract = (props: INewRentingContract) => {
       landlord: '',
       property_id: ''
     },
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema) as any,
     mode: 'all'
   });
 

@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../compat/router';
 
 import { Modal, ModalProps } from '../../components/Modal';
 import { Typography } from '../../components/Typography';

@@ -3,17 +3,17 @@ import classNames from 'classnames';
 import { HTMLAttributes } from 'react';
 import { motion } from 'framer-motion';
 
-import { Typography } from '../../../components/index.ts';
-import { Label } from '../../../components/index.ts';
-import { Icon } from '../../../components/index.ts';
-import { ShowGlobalLoading } from '../../../components/index.ts';
-import { PropertyCard } from '../../../components/index.ts';
+import { Typography } from '../../../components/index';
+import { Label } from '../../../components/index';
+import { Icon } from '../../../components/index';
+import { ShowGlobalLoading } from '../../../components/index';
+import { PropertyCard } from '../../../components/index';
 
-import { useSuggestedPropertiesWithoutAccount } from './useSuggestedPropertiesWithoutAccount.tsx';
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.ts';
+import { useSuggestedPropertiesWithoutAccount } from './useSuggestedPropertiesWithoutAccount';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
 
 import backgroundImg from '../../Home/forest.jpeg';
-import { useCriteriaWithoutAccountStore } from '../../../globalState/useCriteriaWithoutAccount.ts';
+import { useCriteriaWithoutAccountStore } from '../../../globalState/useCriteriaWithoutAccount';
 
 interface MatchesWithoutAccountSectionProps extends HTMLAttributes<HTMLDivElement> {
   onCreateAccountClick: () => any;

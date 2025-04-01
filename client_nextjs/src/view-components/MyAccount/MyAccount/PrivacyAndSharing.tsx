@@ -1,9 +1,9 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
-import { Button, CloseButton, Label, Modal, ShowGlobalLoading, Typography } from '../../components/index.ts';
-import request from '../../utils/axios.ts';
-import { useUserStore } from '../../globalState/user.tsx';
-import { useNavigate } from 'react-router-dom';
+import { Button, CloseButton, Label, Modal, ShowGlobalLoading, Typography } from '../../../components/index';
+import request from '../../../utils/axios';
+import { useUserStore } from '../../../globalState/user';
+import { useNavigate } from '../../../compat/router';
 import { useMutation } from '@tanstack/react-query';
 
 export const PrivacyAndSharing = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {

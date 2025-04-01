@@ -1,15 +1,15 @@
-import { DefaultState } from '../DefaultState.tsx';
-import { MatchesAwaiting } from './MatchesAwaiting.tsx';
-import { States } from '../DashboardOverview.tsx';
-import { PerfectMatch } from './PerfectMatch.tsx';
-import { useMatchedProperties } from '../../../Matches/MatchesProperties/useMatchedProperties.tsx';
+import { DefaultState } from '../DefaultState';
+import { MatchesAwaiting } from './MatchesAwaiting';
+import { States } from '../DashboardOverview';
+import { PerfectMatch } from './PerfectMatch';
+import { useMatchedProperties } from '../../../../Matches/MatchesProperties/useMatchedProperties';
 import React, { useState } from 'react';
-import { MultiplePerfectMatches } from './MultiplePerfectMatches.tsx';
-import { Agreement } from '../Agreement.tsx';
-import { FinalDocs } from './FinalDocs.tsx';
-import { useProfileStore } from '../../../../globalState/profile.tsx';
-import { useSuggestedProperties } from '../../../Suggestions/SuggestionsProperties/useSuggestedProperties.tsx';
-import { motionPropsAnimatePresence } from '../OverViewSection.tsx';
+import { MultiplePerfectMatches } from './MultiplePerfectMatches';
+import { Agreement } from '../Agreement';
+import { FinalDocs } from './FinalDocs';
+import { useProfileStore } from '../../../../../globalState/profile';
+import { useSuggestedProperties } from '../../../../Suggestions/SuggestionsProperties/useSuggestedProperties';
+import { motionPropsAnimatePresence } from '../OverViewSection';
 
 interface DashboardOverviewForTenantProps {}
 export const DashboardOverviewForTenant = ({}: DashboardOverviewForTenantProps) => {

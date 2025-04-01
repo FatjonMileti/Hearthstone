@@ -1,7 +1,7 @@
 import { styled } from '@mui/system';
 import classNames from 'classnames';
 import { HTMLAttributes } from 'react';
-import { Icon, IconProps } from './Icon.tsx';
+import { Icon, IconProps } from './Icon';
 
 interface RoundActionProps extends HTMLAttributes<HTMLButtonElement> {
   inverted?: boolean;

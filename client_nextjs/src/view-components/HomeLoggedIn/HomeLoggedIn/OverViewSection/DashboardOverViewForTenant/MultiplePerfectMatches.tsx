@@ -1,13 +1,13 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../../../compat/router';
 
-import { Avatar, Icon, Label, Typography } from '../../../../components/index.ts';
+import { Avatar, Icon, Label, Typography } from '../../../../../components/index';
 
-import { MatchedPropertyType } from '../../../Matches/matches.type.ts';
-import { getAvatarFormIndex } from '../../avatars.tsx';
-import { useProfileStore } from '../../../../globalState/profile.tsx';
+import { MatchedPropertyType } from '../../../../Matches/matches.type';
+import { getAvatarFormIndex } from '../../avatars';
+import { useProfileStore } from '../../../../../globalState/profile';
 import { motion, MotionProps } from 'framer-motion';
 
 interface MultiplePerfectMatchesProps extends HTMLAttributes<HTMLDivElement> {

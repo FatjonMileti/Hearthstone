@@ -1,4 +1,4 @@
-import { Role } from '../../../enums.ts';
+import { Role } from '../../enums.ts';
 
 export enum DocumentType {
   'Employer reference' = 'Employer reference',

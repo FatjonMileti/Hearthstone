@@ -1,18 +1,18 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { Avatar, Icon, Label, Typography } from '../../../../components/index.ts';
+import { Avatar, Icon, Label, Typography } from '../../../../../components/index';
 
-import { useNavigate } from 'react-router-dom';
-import { MatchedPropertyType } from '../../../Matches/matches.type.ts';
-import { getAvatarFormIndex } from '../../avatars.tsx';
-import { useProfileStore } from '../../../../globalState/profile.tsx';
-import { ViewProperty } from '../../../Matches/MatchesProperties/ViewProperty.tsx';
+import { useNavigate } from '../../../../../compat/router';
+import { MatchedPropertyType } from '../../../../Matches/matches.type';
+import { getAvatarFormIndex } from '../../avatars';
+import { useProfileStore } from '../../../../../globalState/profile';
+import { ViewProperty } from '../../../../Matches/MatchesProperties/ViewProperty';
 import { useMutation } from '@tanstack/react-query';
-import axios from '../../../../utils/axios.ts';
-import { useUserStore } from '../../../../globalState/user.tsx';
-import { useMatchedProperties } from '../../../Matches/MatchesProperties/useMatchedProperties.tsx';
-import { cancelMatchedProperty } from '../../../Matches/MatchesForTenant/cancelMatchedProperty.tsx';
+import axios from '../../../../../utils/axios';
+import { useUserStore } from '../../../../../globalState/user';
+import { useMatchedProperties } from '../../../../Matches/MatchesProperties/useMatchedProperties';
+import { cancelMatchedProperty } from '../../../../Matches/MatchesForTenant/cancelMatchedProperty';
 import { motion, MotionProps } from 'framer-motion';
 
 interface PerfectMatchProps extends HTMLAttributes<HTMLDivElement> {

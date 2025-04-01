@@ -2,10 +2,10 @@ import { styled } from '@mui/system';
 import { HTMLProps, MouseEventHandler } from 'react';
 import classNames from 'classnames';
 
-import { Typography, Icon, Label } from '../../../components/index.ts';
+import { Typography, Icon, Label } from '../../../components/index';
 
-import axios from '../../../utils/axios.ts';
-import { useUserStore } from '../../../globalState/user.tsx';
+import axios from '../../../utils/axios';
+import { useUserStore } from '../../../globalState/user';
 
 export interface PropertyProps extends HTMLProps<HTMLDivElement> {
   propertyId: string;

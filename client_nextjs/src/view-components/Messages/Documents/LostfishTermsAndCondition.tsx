@@ -1,17 +1,18 @@
-import { Typography } from '../../../components/index.ts';
+type IGridState = any;
+import { Typography } from '../../../components/index';
 import React, { Fragment, HTMLAttributes } from 'react';
-import { useUserStore } from '../../../globalState/user.tsx';
-import axios from '../../../utils/axios.ts';
-import config from '../../../config.ts';
-import { Button } from '../../../components/index.ts';
-import { useProfileStore } from '../../../globalState/profile.tsx';
+import { useUserStore } from '../../../globalState/user';
+import axios from '../../../utils/axios';
+import config from '../../../config';
+import { Button } from '../../../components/index';
+import { useProfileStore } from '../../../globalState/profile';
 import { styled } from '@mui/system';
 import classNames from 'classnames';
-import { Icon } from '../../../components/index.ts';
-import { Checkbox } from '../../../components/index.ts';
-import { Label } from '../../../components/index.ts';
-import { useNavigate } from 'react-router-dom';
-import { Role } from '../../../enums.ts';
+import { Icon } from '../../../components/index';
+import { Checkbox } from '../../../components/index';
+import { Label } from '../../../components/index';
+import { useNavigate } from '../../../compat/router';
+import { Role } from '../../../enums';
 
 enum DocumentType {
   PRIVACY_AGREEMENT = 'Hearthstone privacy agreement',

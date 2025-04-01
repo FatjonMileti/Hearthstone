@@ -3,20 +3,20 @@ import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { useMutation } from '@tanstack/react-query';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 
-import { Icon, Label, PropertyCard, ShowGlobalLoading } from '../../../components/index.ts';
-import { ViewProperty } from '../MatchesProperties/ViewProperty.tsx';
+import { Icon, Label, PropertyCard, ShowGlobalLoading } from '../../../components/index';
+import { ViewProperty } from '../MatchesProperties/ViewProperty';
 
-import axios from '../../../utils/axios.ts';
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
+import axios from '../../../utils/axios';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
 
-import { useUserStore } from '../../../globalState/user.tsx';
+import { useUserStore } from '../../../globalState/user';
 
-import { MatchedPropertyType } from '../matches.type.ts';
-import { useMatchedProperties } from '../MatchesProperties/useMatchedProperties.tsx';
-import { cancelMatchedProperty } from './cancelMatchedProperty.tsx';
-import { useSuggestedProperties } from '../../Suggestions/SuggestionsProperties/useSuggestedProperties.tsx';
+import { MatchedPropertyType } from '../matches.type';
+import { useMatchedProperties } from '../MatchesProperties/useMatchedProperties';
+import { cancelMatchedProperty } from './cancelMatchedProperty';
+import { useSuggestedProperties } from '../../Suggestions/SuggestionsProperties/useSuggestedProperties';
 
 interface PerfectMatchesProps extends HTMLAttributes<HTMLDivElement> {}
 export const PerfectMatches = styled(({ className }: PerfectMatchesProps) => {

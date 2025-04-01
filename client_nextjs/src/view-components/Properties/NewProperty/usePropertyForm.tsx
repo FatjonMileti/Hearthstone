@@ -38,7 +38,7 @@ export const usePropertyForm = () => {
       areaOfInterest: '',
       propertyImages: []
     },
-    resolver: yupResolver(propertyFormSchema),
+    resolver: yupResolver(propertyFormSchema) as any,
     mode: 'all'
   });
 

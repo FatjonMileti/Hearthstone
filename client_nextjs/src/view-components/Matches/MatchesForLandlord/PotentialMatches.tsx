@@ -4,19 +4,19 @@ import classNames from 'classnames';
 import { useMutation } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 
-import { TenantCard, ShowGlobalLoading, Icon, Label } from '../../../components/index.ts';
+import { TenantCard, ShowGlobalLoading, Icon, Label } from '../../../components/index';
 
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
-import { useUserStore } from '../../../globalState/user.tsx';
-import { SuggestedTenantType } from '../matches.type.ts';
-import { ViewProfile } from '../MatchesTenants/ViewProfile.tsx';
-import { EditPropertyModal } from '../../Properties/NewProperty/EditPropertyModal.tsx';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
+import { useUserStore } from '../../../globalState/user';
+import { SuggestedTenantType } from '../matches.type';
+import { ViewProfile } from '../MatchesTenants/ViewProfile';
+import { EditPropertyModal } from '../../Properties/NewProperty/EditPropertyModal';
 
-import { useSuggestedTenants } from '../../Suggestions/SugestionsTenants/useSuggestedTenants.tsx';
-import { useMatchedTenants } from '../MatchesTenants/useMatchedTenants.tsx';
-import { matchSuggestedTenant } from './matchSuggestedTenant.tsx';
-import { dismissSuggestedTenant } from './dismissSuggestedTenant.tsx';
-import { NoMatchesCard } from '../NoMatchesCard.tsx';
+import { useSuggestedTenants } from '../../Suggestions/SugestionsTenants/useSuggestedTenants';
+import { useMatchedTenants } from '../MatchesTenants/useMatchedTenants';
+import { matchSuggestedTenant } from './matchSuggestedTenant';
+import { dismissSuggestedTenant } from './dismissSuggestedTenant';
+import { NoMatchesCard } from '../NoMatchesCard';
 
 interface PotentialMatchesProps extends HTMLAttributes<HTMLDivElement> {}
 export const PotentialMatches = styled(({ className }: PotentialMatchesProps) => {

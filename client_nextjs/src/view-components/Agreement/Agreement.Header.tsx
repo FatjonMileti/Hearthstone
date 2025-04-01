@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from '../../compat/router';
 
 import HearthstoneLogoColored from '../../assets/svg/LogoHearthstoneColored.svg';
 import { MenuButton } from '../../components/MenuButton';

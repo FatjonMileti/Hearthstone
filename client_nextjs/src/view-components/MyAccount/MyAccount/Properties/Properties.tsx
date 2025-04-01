@@ -1,21 +1,22 @@
+type IGridState = any;
 import React from 'react';
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from '../../../../compat/router';
 
-import { Typography } from '../../../components';
-import { Button } from '../../../components';
-import { Icon } from '../../../components';
-import { ShowGlobalLoading } from '../../../components';
-import { Label } from '../../../components';
+import { Typography } from '../../../../components';
+import { Button } from '../../../../components';
+import { Icon } from '../../../../components';
+import { ShowGlobalLoading } from '../../../../components';
+import { Label } from '../../../../components';
 
-import axios from '../../../utils/axios';
-import { useUserStore } from '../../../globalState/user';
+import axios from '../../../../utils/axios';
+import { useUserStore } from '../../../../globalState/user';
 
 import { Property } from './Property/Property';
 
-import { EditPropertyModal } from '../../Properties/NewProperty/EditPropertyModal';
-import { AddPropertyModal } from '../../Properties/NewProperty/AddPropertyModal';
+import { EditPropertyModal } from '../../../Properties/NewProperty/EditPropertyModal';
+import { AddPropertyModal } from '../../../Properties/NewProperty/AddPropertyModal';
 
 const state: IGridState = {
   loading: true,

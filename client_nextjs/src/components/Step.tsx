@@ -1,8 +1,8 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
-import { Typography } from './Typography.tsx';
-import { Icon } from './Icon.tsx';
+import { Typography } from './Typography';
+import { Icon } from './Icon';
 
 enum State {
   default = 'default',

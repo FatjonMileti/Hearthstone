@@ -1,6 +1,6 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
-import { NavLink, Route, Routes, useNavigate } from 'react-router-dom';
+import { NavLink, Route, Routes, useNavigate } from '../../../../compat/router';
 import { motion } from 'framer-motion';
 
 import { Icon } from '../../../../components';

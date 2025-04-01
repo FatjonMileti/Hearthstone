@@ -1,11 +1,11 @@
 import { styled } from '@mui/system';
 import { HTMLProps } from 'react';
-import { Icon, Label, Typography } from '../../../components/index.ts';
+import { Icon, Label, Typography } from '../../../../components/index';
 import classNames from 'classnames';
-import { Step } from '../../../components/Step.tsx';
-import { useProfileStore } from '../../../globalState/profile.tsx';
-import { useNavigate } from 'react-router-dom';
-import { DocumentType } from '../../MyAccount/user.interface.ts';
+import { Step } from '../../../../components/Step';
+import { useProfileStore } from '../../../../globalState/profile';
+import { useNavigate } from '../../../../compat/router';
+import { DocumentType } from '../../../MyAccount/user.interface';
 
 interface GetNoticedProps extends HTMLProps<HTMLDivElement> {}
 export const GetNoticed = styled(({ className }: GetNoticedProps) => {

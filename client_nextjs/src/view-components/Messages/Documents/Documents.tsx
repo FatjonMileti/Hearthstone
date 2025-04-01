@@ -9,7 +9,7 @@ import { Tab, Tabs } from '../../../components';
 import { IRoom } from '../messages.interface';
 import { TenantDocuments } from './TenantDocuments';
 import { SignedDocuments } from './SignedDocuments';
-import { HearthstoneTermsAndCondition } from './HearthstoneTermsAndCondition';
+import { HearthstoneTermsAndCondition } from './LostfishTermsAndCondition';
 import { useUserStore } from '../../../globalState/user';
 import { NewRentingContract } from './NewRentingContract';
 import request from '../../../utils/axios';

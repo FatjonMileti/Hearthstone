@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from '../../../compat/router';
 
 export const RedirectUriPage = () => {
   const params = new URLSearchParams(useLocation().search);

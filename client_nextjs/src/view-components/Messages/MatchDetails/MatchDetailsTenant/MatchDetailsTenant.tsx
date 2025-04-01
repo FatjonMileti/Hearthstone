@@ -1,20 +1,20 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
-import { IRoom } from '../../messages.interface.ts';
+import { IRoom } from '../../messages.interface';
 import classNames from 'classnames';
-import { Avatar, Icon, Label, ShowGlobalLoading, Typography } from '../../../../components/index.ts';
+import { Avatar, Icon, Label, ShowGlobalLoading, Typography } from '../../../../components/index';
 import moment from 'moment/moment';
-import { getAvatarFormIndex } from '../../../HomeLoggedIn/avatars.tsx';
-import { useUserStore } from '../../../../globalState/user.tsx';
-import { ViewProfile } from '../../../Matches/MatchesTenants/ViewProfile.tsx';
+import { getAvatarFormIndex } from '../../../HomeLoggedIn/avatars';
+import { useUserStore } from '../../../../globalState/user';
+import { ViewProfile } from '../../../Matches/MatchesTenants/ViewProfile';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { ApiOfferDocument } from '../MatchDetailsProperty/MatchDetailsproperty.ReviewOfferModal.tsx';
-import axios from '../../../../utils/axios.ts';
-import { ReviewOfferModal } from './MatchDetailsTenant.ReviewOfferModal.tsx';
+import { ApiOfferDocument } from '../MatchDetailsProperty/MatchDetailsproperty.ReviewOfferModal';
+import axios from '../../../../utils/axios';
+import { ReviewOfferModal } from './MatchDetailsTenant.ReviewOfferModal';
 
-import { Documents } from '../../Documents/Documents.tsx';
-import { MatchedTenantType } from '../../../Matches/matches.type.ts';
-import { mapTenant } from '../../../Matches/MatchesTenants/serializers.ts';
+import { Documents } from '../../Documents/Documents';
+import { MatchedTenantType } from '../../../Matches/matches.type';
+import { mapTenant } from '../../../Matches/MatchesTenants/serializers';
 
 interface MatchDetailsTenantProps extends HTMLAttributes<HTMLDivElement> {
   room: IRoom;

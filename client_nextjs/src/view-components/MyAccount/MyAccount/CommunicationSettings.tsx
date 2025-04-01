@@ -5,12 +5,12 @@ import { useMutation } from '@tanstack/react-query';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { Switch, Typography, Button, ShowGlobalLoading } from '../../components/index.ts';
-import { InfoCard } from './components/InfoCard.tsx';
-import axios from '../../utils/axios.ts';
-import { useUserStore } from '../../globalState/user.tsx';
-import { UserNotifications } from './user.interface.ts';
-import { useProfileStore } from '../../globalState/profile.tsx';
+import { Switch, Typography, Button, ShowGlobalLoading } from '../../../components/index';
+import { InfoCard } from './components/InfoCard';
+import axios from '../../../utils/axios';
+import { useUserStore } from '../../../globalState/user';
+import { UserNotifications } from './user.interface';
+import { useProfileStore } from '../../../globalState/profile';
 import GirlOnPhone from './images/girl on phone.png';
 
 const userNotificationSchema = yup.object().shape({
@@ -26,7 +26,7 @@ export const CommunicationSettings = styled(({ className }: HTMLAttributes<HTMLD
   const profileStore = useProfileStore();
 
   const notificationForm = useForm<UserNotifications>({
-    resolver: yupResolver(userNotificationSchema),
+    resolver: yupResolver(userNotificationSchema) as any,
     defaultValues: profileStore.notification
   });
 

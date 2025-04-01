@@ -2,11 +2,11 @@ import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 
 import classNames from 'classnames';
-import { NavLink } from 'react-router-dom';
-import { Icon } from '../Icon.tsx';
-import { Avatar } from '../Avatar.tsx';
+import { NavLink } from '../../compat/router';
+import { Icon } from '../Icon';
+import { Avatar } from '../Avatar';
 
-import { AccountMenuPopover } from './AccountMenuPopover.tsx';
+import { AccountMenuPopover } from './AccountMenuPopover';
 
 export interface AccountWidgetProps extends HTMLAttributes<HTMLDivElement> {
   avatar: string;

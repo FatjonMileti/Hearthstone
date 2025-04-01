@@ -4,21 +4,21 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { useMutation } from '@tanstack/react-query';
 
-import { Icon, Label, PropertyCard, ShowGlobalLoading } from '../../../components/index.ts';
+import { Icon, Label, PropertyCard, ShowGlobalLoading } from '../../../components/index';
 
-import { ViewProperty } from '../MatchesProperties/ViewProperty.tsx';
+import { ViewProperty } from '../MatchesProperties/ViewProperty';
 
-import { useUserStore } from '../../../globalState/user.tsx';
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
-import { useCriteriaStore } from '../../../globalState/criteria.tsx';
-import { useGlobalSetCriteria } from '../../SetCriteria/GlobalSetCriteria.tsx';
+import { useUserStore } from '../../../globalState/user';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
+import { useCriteriaStore } from '../../../globalState/criteria';
+import { useGlobalSetCriteria } from '../../SetCriteria/GlobalSetCriteria';
 
-import { SuggestedPropertyType } from '../matches.type.ts';
-import { useSuggestedProperties } from '../../Suggestions/SuggestionsProperties/useSuggestedProperties.tsx';
-import { useMatchedProperties } from '../MatchesProperties/useMatchedProperties.tsx';
-import { matchSuggestedProperty } from './matchSuggestedProperty.tsx';
-import { dismissSuggestedProperty } from './dismissSuggestedProperty.tsx';
-import { NoMatchesCard } from '../NoMatchesCard.tsx';
+import { SuggestedPropertyType } from '../matches.type';
+import { useSuggestedProperties } from '../../Suggestions/SuggestionsProperties/useSuggestedProperties';
+import { useMatchedProperties } from '../MatchesProperties/useMatchedProperties';
+import { matchSuggestedProperty } from './matchSuggestedProperty';
+import { dismissSuggestedProperty } from './dismissSuggestedProperty';
+import { NoMatchesCard } from '../NoMatchesCard';
 
 interface PotentialMatchesProps extends HTMLAttributes<HTMLDivElement> {}
 export const PotentialMatches = styled(({ className }: PotentialMatchesProps) => {

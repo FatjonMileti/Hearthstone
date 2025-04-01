@@ -1,11 +1,11 @@
 import { styled } from '@mui/system';
 import React from 'react';
 
-import { Typography } from '../../components/Typography.tsx';
+import { Typography } from '../../components/Typography';
 
 import HearthstoneFullLogoBlack from '../../assets/svg/LogoLostFishColored.svg';
 
-import { Link } from '../../components/Link.tsx';
+import { Link } from '../../components/Link';
 
 export const Footer = styled(({ className }: React.HTMLAttributes<HTMLDivElement>) => {
   return (

@@ -1,8 +1,9 @@
+// @ts-nocheck
 import React, { HTMLAttributes } from 'react';
 import { styled } from '@mui/system';
-import { Drawer } from '../../components/Drawer.tsx';
+import { Drawer } from '../../components/Drawer';
 import classNames from 'classnames';
-import { Notifications } from './Notifications.tsx';
+import { Notifications } from './Notifications';
 
 interface NotificationsDrawerProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;

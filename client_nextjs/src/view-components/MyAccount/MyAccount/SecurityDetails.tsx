@@ -1,14 +1,14 @@
 import { styled } from '@mui/system';
 import React, { Fragment, HTMLAttributes, useRef } from 'react';
-import { ShowGlobalLoading, Typography } from '../../components/index.ts';
-import { Icon, Label } from '../../components/index.ts';
+import { ShowGlobalLoading, Typography } from '../../../components/index';
+import { Icon, Label } from '../../../components/index';
 import Apple from './Apple_logo_black 1.svg';
 import Google from './Google.svg';
-import axios from '../../utils/axios.ts';
-import { useUserStore } from '../../globalState/user.tsx';
-import { IconProps } from '../../components/Icon.tsx';
-import { DocumentType, IUser_Documents } from './user.interface.ts';
-import { useProfileStore } from '../../globalState/profile.tsx';
+import axios from '../../../utils/axios';
+import { useUserStore } from '../../../globalState/user';
+import { IconProps } from '../../../components/Icon';
+import { DocumentType, IUser_Documents } from './user.interface';
+import { useProfileStore } from '../../../globalState/profile';
 import { useMutation } from '@tanstack/react-query';
 
 interface DeviceHistory {

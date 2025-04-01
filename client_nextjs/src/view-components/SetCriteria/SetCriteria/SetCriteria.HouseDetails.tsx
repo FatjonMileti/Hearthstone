@@ -7,8 +7,8 @@ import { HTMLMotionProps, motion } from 'framer-motion';
 import { Switch } from '../../../components/Switch';
 import { Typography } from '../../../components/Typography';
 
-import { OtherSpecificPropertyFeature } from './criteria.types';
-import { CriteriaFormType } from './criteria.types';
+import { OtherSpecificPropertyFeature } from '../criteria.types';
+import { CriteriaFormType } from '../criteria.types';
 import { Furnished } from '../../Properties/NewProperty/property.constants';
 
 interface SetCriteriaHouseDetailsProps extends HTMLMotionProps<'div'> {

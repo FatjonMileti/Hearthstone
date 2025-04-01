@@ -1,12 +1,12 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../../../compat/router';
 
-import { Avatar, Label, Typography } from '../../../../components/index.ts';
-import { useProfileStore } from '../../../../globalState/profile.tsx';
-import { getAvatarFormIndex } from '../../avatars.tsx';
-import { MatchedTenantType } from '../../../Matches/matches.type.ts';
+import { Avatar, Label, Typography } from '../../../../../components/index';
+import { useProfileStore } from '../../../../../globalState/profile';
+import { getAvatarFormIndex } from '../../avatars';
+import { MatchedTenantType } from '../../../../Matches/matches.type';
 import { motion, MotionProps } from 'framer-motion';
 
 interface FinalDocsProps extends HTMLAttributes<HTMLDivElement> {

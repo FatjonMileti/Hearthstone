@@ -1,14 +1,14 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 
-import { usePropertyForm } from './usePropertyForm.tsx';
-import { ApiPropertyDocumentType } from './property.types.ts';
-import axios from '../../../utils/axios.ts';
-import { useUserStore } from '../../../globalState/user.tsx';
-import { Modal } from '../../../components/Modal.tsx';
-import { Typography } from '../../../components/Typography.tsx';
-import { PropertyForm } from './PropertyForm.tsx';
-import { RoundAction } from '../../../components/RoundAction.tsx';
+import { usePropertyForm } from './usePropertyForm';
+import { ApiPropertyDocumentType } from './property.types';
+import axios from '../../../utils/axios';
+import { useUserStore } from '../../../globalState/user';
+import { Modal } from '../../../components/Modal';
+import { Typography } from '../../../components/Typography';
+import { PropertyForm } from './PropertyForm';
+import { RoundAction } from '../../../components/RoundAction';
 
 export interface AddPropertyModalProps extends HTMLAttributes<HTMLDivElement> {
   showStore: [boolean, (show: boolean) => void];

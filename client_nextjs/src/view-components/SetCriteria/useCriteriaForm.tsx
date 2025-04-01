@@ -128,7 +128,7 @@ export const useCriteriaForm = (): UseFormReturn<CriteriaFormType> => {
         unit: DistanceUnit.Km,
       }
     },
-    resolver: yupResolver(criteriaFormSchema),
+    resolver: yupResolver(criteriaFormSchema) as any,
     mode: 'all'
   });
 

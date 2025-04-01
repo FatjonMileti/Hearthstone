@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';

@@ -4,19 +4,19 @@ import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import { ShowGlobalLoading } from '../../components/index.ts';
-import { Avatar } from '../../components/index.ts';
-import { Icon } from '../../components/index.ts';
-import { InfoCard } from './components/InfoCard.tsx';
-import { Typography } from '../../components/index.ts';
-import { Button } from '../../components/index.ts';
-import { TextField } from '../../components/index.ts';
-import { Textarea } from '../../components/Textarea.tsx';
+import { ShowGlobalLoading } from '../../../components/index';
+import { Avatar } from '../../../components/index';
+import { Icon } from '../../../components/index';
+import { InfoCard } from './components/InfoCard';
+import { Typography } from '../../../components/index';
+import { Button } from '../../../components/index';
+import { TextField } from '../../../components/index';
+import { Textarea } from '../../../components/Textarea';
 
-import { useProfileStore } from '../../globalState/profile.tsx';
-import { useUserStore } from '../../globalState/user.tsx';
-import axios from '../../utils/axios.ts';
-import { avatars } from '../HomeLoggedIn/avatars.tsx';
+import { useProfileStore } from '../../../globalState/profile';
+import { useUserStore } from '../../../globalState/user';
+import axios from '../../../utils/axios';
+import { avatars } from '../../HomeLoggedIn/avatars';
 import { useMutation } from '@tanstack/react-query';
 
 const userSchema = yup.object().shape({
@@ -51,7 +51,7 @@ export const AccountDetails = styled(({ className }: HTMLAttributes<HTMLDivEleme
   }));
 
   const accountDetailsForm = useForm<AccountDetails>({
-    resolver: yupResolver(userSchema),
+    resolver: yupResolver(userSchema) as any,
     defaultValues: accountDetails,
     mode: 'all'
   });

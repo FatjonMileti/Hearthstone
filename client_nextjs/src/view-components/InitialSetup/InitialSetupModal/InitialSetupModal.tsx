@@ -21,7 +21,7 @@ import { LookingFor, Transaction } from '../../SetCriteria/criteria.contants';
 import { refreshToken } from '../../Login/SessionMaintainer';
 import { LookingForType } from '../../SetCriteria/criteria.types';
 import { useCriteriaWithoutAccountStore } from '../../../globalState/useCriteriaWithoutAccount';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 
 interface InitialSetupModalProps extends ModalProps {}
 

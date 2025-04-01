@@ -63,7 +63,7 @@ export const MakeAnOfferModal = styled(({ className, room, makeOffer, ...rest }:
       warranty: Warranty['1 month'],
       minDuration: Duration['1 year']
     },
-    resolver: yupResolver(offerFormSchema),
+    resolver: yupResolver(offerFormSchema) as any,
     mode: 'all'
   });
 

@@ -1,10 +1,10 @@
 import { HTMLAttributes } from 'react';
 import { styled } from '@mui/system';
-import { Typography } from '../../components/index.ts';
-import { RoundAction } from '../../components/RoundAction.tsx';
-import { notifications } from './notificationsData.ts';
-import { UnreadNotifications } from './UnreadNotifications.tsx';
-import { ReadNotifications } from './ReadNotifications.tsx';
+import { Typography } from '../../components/index';
+import { RoundAction } from '../../components/RoundAction';
+import { notifications } from './notificationsData';
+import { UnreadNotifications } from './UnreadNotifications';
+import { ReadNotifications } from './ReadNotifications';
 
 interface NotificationsProps extends HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;

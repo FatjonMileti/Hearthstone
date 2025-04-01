@@ -2,14 +2,14 @@ import { styled } from '@mui/system';
 import classNames from 'classnames';
 import React, { HTMLAttributes } from 'react';
 
-import { Footer } from '../../Home/Footer.tsx';
+import { Footer } from '../../Home/Footer';
 
-import { HeaderLoggedIn } from '../../PagesComponents/HeaderLoggedIn/HeaderLoggedIn.tsx';
-import { PotentialMatches } from './PotentialMatches.tsx';
-import { Icon, Label, SegmentControl, Typography } from '../../../components/index.ts';
-import { useSuggestedTenants } from '../../Suggestions/SugestionsTenants/useSuggestedTenants.tsx';
-import { PerfectMatches } from './PerfectMatches.tsx';
-import { useMatchedTenants } from '../MatchesTenants/useMatchedTenants.tsx';
+import { HeaderLoggedIn } from '../../PagesComponents/HeaderLoggedIn/HeaderLoggedIn';
+import { PotentialMatches } from './PotentialMatches';
+import { Icon, Label, SegmentControl, Typography } from '../../../components/index';
+import { useSuggestedTenants } from '../../Suggestions/SugestionsTenants/useSuggestedTenants';
+import { PerfectMatches } from './PerfectMatches';
+import { useMatchedTenants } from '../MatchesTenants/useMatchedTenants';
 
 enum ActiveTab {
   Perfect = 'Perfect',

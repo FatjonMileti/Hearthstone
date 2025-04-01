@@ -1,7 +1,7 @@
-import { useProfileStore } from '../../../globalState/profile.tsx';
-import { Role } from '../../../enums.ts';
-import { DashboardOverviewForTenant } from './DashboardOverViewForTenant/DashboardOverviewForTenant.tsx';
-import { DashboardOverviewForLandlord } from './DashboardOverViewForLandlord/DashboardOverviewForLandlord.tsx';
+import { useProfileStore } from '../../../../globalState/profile';
+import { Role } from '../../../../enums';
+import { DashboardOverviewForTenant } from './DashboardOverViewForTenant/DashboardOverviewForTenant';
+import { DashboardOverviewForLandlord } from './DashboardOverViewForLandlord/DashboardOverviewForLandlord';
 
 export enum States {
   Default = 'Default',

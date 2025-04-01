@@ -1,8 +1,8 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
-import { Icon } from '../../../components/index.ts';
-import { Typography } from '../../../components/index.ts';
-import { IconProps } from '../../../components/Icon.tsx';
+import { Icon } from '../../../../components/index';
+import { Typography } from '../../../../components/index';
+import { IconProps } from '../../../../components/Icon';
 
 interface InfoCardProps extends HTMLAttributes<HTMLDivElement> {
   title: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/system';
 import axios, { AxiosError } from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from '../../compat/router';
 
 import config from '../../config';
 import { ShowGlobalLoading } from '../../components';

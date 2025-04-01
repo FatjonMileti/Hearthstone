@@ -4,18 +4,18 @@ import classNames from 'classnames';
 import { useMutation } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 
-import { TenantCard, ShowGlobalLoading, Icon, Label } from '../../../components/index.ts';
+import { TenantCard, ShowGlobalLoading, Icon, Label } from '../../../components/index';
 
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
-import { useUserStore } from '../../../globalState/user.tsx';
-import { MatchedTenantType } from '../matches.type.ts';
-import { ViewProfile } from '../MatchesTenants/ViewProfile.tsx';
-import { EditPropertyModal } from '../../Properties/NewProperty/EditPropertyModal.tsx';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
+import { useUserStore } from '../../../globalState/user';
+import { MatchedTenantType } from '../matches.type';
+import { ViewProfile } from '../MatchesTenants/ViewProfile';
+import { EditPropertyModal } from '../../Properties/NewProperty/EditPropertyModal';
 
-import { useMatchedTenants } from '../MatchesTenants/useMatchedTenants.tsx';
-import { useNavigate } from 'react-router-dom';
-import { cancelMatchedTenant } from './cancelMatchedTenant.tsx';
-import { useSuggestedTenants } from '../../Suggestions/SugestionsTenants/useSuggestedTenants.tsx';
+import { useMatchedTenants } from '../MatchesTenants/useMatchedTenants';
+import { useNavigate } from '../../../compat/router';
+import { cancelMatchedTenant } from './cancelMatchedTenant';
+import { useSuggestedTenants } from '../../Suggestions/SugestionsTenants/useSuggestedTenants';
 
 interface PerfectMatchesProps extends HTMLAttributes<HTMLDivElement> {}
 export const PerfectMatches = styled(({ className }: PerfectMatchesProps) => {

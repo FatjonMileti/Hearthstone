@@ -1,16 +1,16 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 import { AxiosError } from 'axios';
 
-import { Typography } from '../../components/Typography';
-import { Button } from '../../components/Button';
-import { Link } from '../../components/Link';
-import { CloseButton } from '../../components/CloseButton';
-import { Modal } from '../../components/Modal';
+import { Typography } from '../../../components/Typography';
+import { Button } from '../../../components/Button';
+import { Link } from '../../../components/Link';
+import { CloseButton } from '../../../components/CloseButton';
+import { Modal } from '../../../components/Modal';
 
-import request from '../../utils/axios';
-import { useUserStore } from '../../globalState/user';
+import request from '../../../utils/axios';
+import { useUserStore } from '../../../globalState/user';
 
 export const AccountSettings = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   const [deleteAccountModalVisibility, setDeleteAccountModalVisibility] = React.useState(false);

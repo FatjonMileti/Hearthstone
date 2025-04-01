@@ -5,7 +5,7 @@ import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { Typography } from '../../../components/Typography';
 import { useSuggestedProperties } from '../../Suggestions/SuggestionsProperties/useSuggestedProperties';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 import { Skeleton } from '@mui/material';
 
 interface PropertiesReviewHeaderProps extends HTMLAttributes<HTMLDivElement> {}

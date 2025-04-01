@@ -1,18 +1,18 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from '../../../compat/router';
 import classNames from 'classnames';
 
-import { useProfileStore } from '../../../globalState/profile.tsx';
-import { useNotificationsStore } from '../../../globalState/notifications.ts';
-import { AccountWidget } from '../../../components/AccountWidget/AccountWidget.tsx';
-import { NotificationsIcon } from '../../../components/index.ts';
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
-import { Role } from '../../../enums.ts';
-import { MenuItem } from './MenuItem.tsx';
+import { useProfileStore } from '../../../globalState/profile';
+import { useNotificationsStore } from '../../../globalState/notifications';
+import { AccountWidget } from '../../../components/AccountWidget/AccountWidget';
+import { NotificationsIcon } from '../../../components/index';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
+import { Role } from '../../../enums';
+import { MenuItem } from './MenuItem';
 
 import HearthstoneLogoColored from '../../../assets/svg/HearthstoneLogo.svg';
-import { NotificationsDrawer } from '../../Notifications/NotificationsDrawer.tsx';
+import { NotificationsDrawer } from '../../Notifications/NotificationsDrawer';
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 

@@ -2,14 +2,14 @@ import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { Label, ShowGlobalLoading, Typography } from '../../../components/index.ts';
+import { Label, ShowGlobalLoading, Typography } from '../../../../components/index';
 import agreementImage from './DashboardOverViewForTenant/pierre.png';
-import { useProfileStore } from '../../../globalState/profile.tsx';
-import axiosWithToken from '../../../utils/axios.ts';
-import axios from '../../../utils/axios.ts';
-import { useUserStore } from '../../../globalState/user.tsx';
-import config from '../../../config.ts';
-import { Role } from '../../../enums.ts';
+import { useProfileStore } from '../../../../globalState/profile';
+import axiosWithToken from '../../../../utils/axios';
+import axios from '../../../../utils/axios';
+import { useUserStore } from '../../../../globalState/user';
+import config from '../../../../config';
+import { Role } from '../../../../enums';
 import { useMutation } from '@tanstack/react-query';
 import { motion, MotionProps } from 'framer-motion';
 

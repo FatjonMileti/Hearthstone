@@ -1,7 +1,7 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { Typography } from './Typography.tsx';
+import { Typography } from './Typography';
 
 export interface SegmentControlProps extends HTMLAttributes<HTMLDivElement> {
   label: string;

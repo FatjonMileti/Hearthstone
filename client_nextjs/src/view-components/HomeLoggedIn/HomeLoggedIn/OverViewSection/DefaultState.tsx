@@ -1,9 +1,9 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../../compat/router';
 
-import { Label, Typography } from '../../../components';
+import { Label, Typography } from '../../../../components';
 import pierre from './DashboardOverViewForTenant/pierre.png';
 import { motion, MotionProps } from 'framer-motion';
 

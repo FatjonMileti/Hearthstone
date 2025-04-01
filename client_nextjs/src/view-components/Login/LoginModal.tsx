@@ -7,14 +7,15 @@ import classNames from 'classnames';
 import axios, { AxiosError } from 'axios';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../compat/router';
+import dynamic from 'next/dynamic';
 
 import { Modal, ModalProps } from '../../components/Modal';
 import { ShowGlobalLoading } from '../../components';
 import { Typography } from '../../components';
 import { Button } from '../../components';
 import { Icon } from '../../components';
-import { LoginWithFacebook } from './components/LoginWithFacebook';
+const LoginWithFacebook = dynamic(() => import('./components/LoginWithFacebook').then((m) => m.LoginWithFacebook), { ssr: false });
 import { TextField } from '../../components';
 import { IconButton } from '../../components';
 import { CloseButton } from '../../components';
@@ -22,7 +23,7 @@ import { Label } from '../../components';
 import { SocialAccountButton } from '../../components';
 
 import { LoginWithTwitter } from './components/LoginWithTwitter';
-import { LoginWithGoogle } from './components/LoginWithGoogle';
+const LoginWithGoogle = dynamic(() => import('./components/LoginWithGoogle').then((m) => m.LoginWithGoogle), { ssr: false });
 
 import config from '../../config';
 import { useUserStore } from '../../globalState/user';
@@ -43,7 +44,7 @@ interface LoginModalProps extends ModalProps {
 
 export const LoginModal = styled(
   ({ className, onCreateAccountClick, onForgotPasswordClick, ...otherProps }: LoginModalProps) => {
-    const loginForm = useForm({ resolver: yupResolver(schema), mode: 'all' });
+    const loginForm = useForm({ resolver: yupResolver(schema) as any, mode: 'all' });
     const [showPassword, setShowPassword] = React.useState(false);
     const userStore = useUserStore();
     const [loading, setLoading] = React.useState(false);

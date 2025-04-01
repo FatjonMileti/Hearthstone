@@ -62,7 +62,7 @@ export const Agreement = styled((props: IAgreement) => {
       landlord: '',
       property_id: ''
     },
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema) as any,
     mode: 'all'
   });
 

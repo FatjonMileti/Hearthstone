@@ -1,14 +1,14 @@
 import { HTMLAttributes } from 'react';
 import { styled } from '@mui/system';
 
-import { Avatar, Label, Modal } from '../../../components/index.ts';
-import { Typography } from '../../../components/index.ts';
-import { Icon } from '../../../components/index.ts';
+import { Avatar, Label, Modal } from '../../../components/index';
+import { Typography } from '../../../components/index';
+import { Icon } from '../../../components/index';
 
 import verified from '../../MyAccount/images/verified.svg';
-import { avatars, getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
-import { ApiPropertyDocumentType } from '../../Properties/NewProperty/property.types.ts';
-import { RoundAction } from '../../../components/RoundAction.tsx';
+import { avatars, getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
+import { ApiPropertyDocumentType } from '../../Properties/NewProperty/property.types';
+import { RoundAction } from '../../../components/RoundAction';
 
 export interface TenantMatchData {
   chosen: boolean;

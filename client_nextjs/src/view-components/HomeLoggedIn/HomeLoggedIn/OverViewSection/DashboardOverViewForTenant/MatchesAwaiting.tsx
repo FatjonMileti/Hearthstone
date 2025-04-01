@@ -1,10 +1,10 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { Label, Typography } from '../../../../components/index.ts';
-import { useSuggestedProperties } from '../../../Suggestions/SuggestionsProperties/useSuggestedProperties.tsx';
-import { useNavigate } from 'react-router-dom';
-import { useProfileStore } from '../../../../globalState/profile.tsx';
+import { Label, Typography } from '../../../../../components/index';
+import { useSuggestedProperties } from '../../../../Suggestions/SuggestionsProperties/useSuggestedProperties';
+import { useNavigate } from '../../../../../compat/router';
+import { useProfileStore } from '../../../../../globalState/profile';
 import { motion, MotionProps } from 'framer-motion';
 
 interface MatchesAwaitingProps extends HTMLAttributes<HTMLDivElement> {

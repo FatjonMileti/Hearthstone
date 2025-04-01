@@ -1,9 +1,10 @@
+type IGridState = any;
 import React from 'react';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { useUserStore } from '../../../globalState/user';
 import axios from '../../../utils/axios';
 import config from '../../../config';
-import { Link } from 'react-router-dom';
+import { Link } from '../../../compat/router';
 
 const state: IGridState = {
   loading: true,

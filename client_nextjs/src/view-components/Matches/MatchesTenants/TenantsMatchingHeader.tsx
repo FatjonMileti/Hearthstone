@@ -6,7 +6,7 @@ import { Label } from '../../../components/Label';
 import { Typography } from '../../../components/Typography';
 
 import { Icon } from '../../../components/Icon';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 
 interface TenantsMatchingHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 

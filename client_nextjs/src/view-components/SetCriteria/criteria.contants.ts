@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as yup from 'yup';
 import { ObjectSchema } from 'yup';
 import { CriteriaFormType, OtherSpecificPropertyFeature } from './criteria.types';

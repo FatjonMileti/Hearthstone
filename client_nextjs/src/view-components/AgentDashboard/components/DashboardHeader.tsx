@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from '../../../compat/router';
 import { Button } from '../../../components/Button';
 import { Typography } from '../../../components/Typography';
 import { Icon } from '../../../components/Icon';

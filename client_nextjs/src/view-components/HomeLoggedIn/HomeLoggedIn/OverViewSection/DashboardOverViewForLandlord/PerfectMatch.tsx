@@ -1,17 +1,17 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { Icon, Label, ShowGlobalLoading, Typography } from '../../../../components/index.ts';
+import { Icon, Label, ShowGlobalLoading, Typography } from '../../../../../components/index';
 
-import { useNavigate } from 'react-router-dom';
-import { MatchedTenantType } from '../../../Matches/matches.type.ts';
-import { getAvatarFormIndex } from '../../avatars.tsx';
-import { useProfileStore } from '../../../../globalState/profile.tsx';
-import { ViewProfile } from '../../../Matches/MatchesTenants/ViewProfile.tsx';
+import { useNavigate } from '../../../../../compat/router';
+import { MatchedTenantType } from '../../../../Matches/matches.type';
+import { getAvatarFormIndex } from '../../avatars';
+import { useProfileStore } from '../../../../../globalState/profile';
+import { ViewProfile } from '../../../../Matches/MatchesTenants/ViewProfile';
 import { useMutation } from '@tanstack/react-query';
-import { cancelMatchedTenant } from '../../../Matches/MatchesForLandlord/cancelMatchedTenant.tsx';
-import { useMatchedTenants } from '../../../Matches/MatchesTenants/useMatchedTenants.tsx';
-import { useUserStore } from '../../../../globalState/user.tsx';
+import { cancelMatchedTenant } from '../../../../Matches/MatchesForLandlord/cancelMatchedTenant';
+import { useMatchedTenants } from '../../../../Matches/MatchesTenants/useMatchedTenants';
+import { useUserStore } from '../../../../../globalState/user';
 import { motion, MotionProps } from 'framer-motion';
 
 interface PerfectMatchProps extends HTMLAttributes<HTMLDivElement> {

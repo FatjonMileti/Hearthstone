@@ -2,17 +2,17 @@ import { styled } from '@mui/system';
 import { HTMLProps, MouseEventHandler } from 'react';
 import classNames from 'classnames';
 
-import { Typography } from '../../../../components';
-import { Button } from '../../../../components';
-import { Icon } from '../../../../components';
+import { Typography } from '../../../../../components';
+import { Button } from '../../../../../components';
+import { Icon } from '../../../../../components';
 
-import { getAvatarFormIndex } from '../../../HomeLoggedIn/avatars';
-import { Slider } from '../../../Properties/Property/Slider';
+import { getAvatarFormIndex } from '../../../../HomeLoggedIn/avatars';
+import { Slider } from '../../../../Properties/Property/Slider';
 
-import { AreaUnitType } from '../../../Properties/NewProperty/property.types';
-import { useSuggestedTenants } from '../../../Suggestions/SugestionsTenants/useSuggestedTenants';
+import { AreaUnitType } from '../../../../Properties/NewProperty/property.types';
+import { useSuggestedTenants } from '../../../../Suggestions/SugestionsTenants/useSuggestedTenants';
 import { Skeleton } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../../../compat/router';
 
 export interface PropertyProps extends HTMLProps<HTMLDivElement> {
   propertyId: string;

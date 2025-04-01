@@ -23,7 +23,7 @@ import {
   PropertyType
 } from '../../Properties/NewProperty/property.constants';
 import { AreaUnitType } from '../../Properties/NewProperty/property.types';
-import { PropertyPreferenceType, CriteriaFormType, OtherSpecificPropertyFeature } from './criteria.types';
+import { PropertyPreferenceType, CriteriaFormType, OtherSpecificPropertyFeature } from '../criteria.types';
 
 interface SetCriteriaHouseTypeProps extends HTMLMotionProps<'div'> {
   form: UseFormReturn<CriteriaFormType>;

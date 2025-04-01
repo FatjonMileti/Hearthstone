@@ -1,14 +1,14 @@
 import { styled } from '@mui/system';
-import { useProfileStore } from '../../globalState/profile.tsx';
-import { submenus, tenantSubmenu } from '../../view-components/MyAccount/MyAccount.tsx';
-import { Popover, PopoverProps } from '../Popover.tsx';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { AccountItem } from '../AccountItem.tsx';
+import { useProfileStore } from '../../globalState/profile';
+import { submenus, tenantSubmenu } from '../../view-components/MyAccount/MyAccount';
+import { Popover, PopoverProps } from '../Popover';
+import { NavLink, useNavigate } from '../../compat/router';
+import { AccountItem } from '../AccountItem';
 import classNames from 'classnames';
-import request from '../../utils/axios.ts';
-import { useUserStore } from '../../globalState/user.tsx';
-import { Typography } from '../Typography.tsx';
-import { LinearProgress } from '../LinearProgress.tsx';
+import request from '../../utils/axios';
+import { useUserStore } from '../../globalState/user';
+import { Typography } from '../Typography';
+import { LinearProgress } from '../LinearProgress';
 
 interface AccountMenuPopoverProps extends PopoverProps {}
 

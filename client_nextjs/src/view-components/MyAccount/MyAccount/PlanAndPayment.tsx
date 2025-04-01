@@ -1,9 +1,9 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
-import { Typography } from '../../components/index.ts';
-import { Button } from '../../components/index.ts';
-import { InfoCard } from './components/InfoCard.tsx';
-import { Icon, Label } from '../../components/index.ts';
+import { Typography } from '../../../components/index';
+import { Button } from '../../../components/index';
+import { InfoCard } from './components/InfoCard';
+import { Icon, Label } from '../../../components/index';
 import visa from './Visa.svg';
 
 export const PlanAndPayment = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {

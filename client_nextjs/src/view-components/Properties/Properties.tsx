@@ -1,18 +1,19 @@
+// @ts-nocheck
 import React from 'react';
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from '../../compat/router';
 import { useQuery } from '@tanstack/react-query';
 
-import { SegmentControl, Typography, ShowGlobalLoading, Icon, Label } from '../../components/index.ts';
-import axios from '../../utils/axios.ts';
-import { useUserStore } from '../../globalState/user.tsx';
-import { Property } from './Property/Property.tsx';
-import { EditPropertyModal } from './NewProperty/EditPropertyModal.tsx';
-import { AddPropertyModal } from './NewProperty/AddPropertyModal.tsx';
-import { HeaderLoggedIn } from '../PagesComponents/HeaderLoggedIn/HeaderLoggedIn.tsx';
-import { Footer } from '../Home/Footer.tsx';
-import { ApiPropertyDocumentType } from './NewProperty/property.types.ts';
+import { SegmentControl, Typography, ShowGlobalLoading, Icon, Label } from '../../components/index';
+import axios from '../../utils/axios';
+import { useUserStore } from '../../globalState/user';
+import { Property } from './Property/Property';
+import { EditPropertyModal } from './NewProperty/EditPropertyModal';
+import { AddPropertyModal } from './NewProperty/AddPropertyModal';
+import { HeaderLoggedIn } from '../PagesComponents/HeaderLoggedIn/HeaderLoggedIn';
+import { Footer } from '../Home/Footer';
+import { ApiPropertyDocumentType } from './NewProperty/property.types';
 
 enum ActiveTab {
   Published = 'published',

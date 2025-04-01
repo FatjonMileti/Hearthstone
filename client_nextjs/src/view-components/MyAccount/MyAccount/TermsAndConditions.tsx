@@ -1,6 +1,6 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
-import { Typography } from '../../components/Typography';
+import { Typography } from '../../../components/Typography';
 
 export const TermsAndConditions = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   return (

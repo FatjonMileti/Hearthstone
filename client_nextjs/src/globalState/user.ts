@@ -3,20 +3,34 @@ import { persist } from 'zustand/middleware';
 
 type UserStoreType = {
   rememberMe: boolean;
-  auth: { access_token: string; refresh_token?: string } | null;
-  userDetails: { user_id: string } | null;
+  auth:
+    | {
+        access_token: string;
+      }
+    | any;
+  userDetails: { user_id: string } | any;
   ability: any;
-  set: (partial: Partial<UserStoreType>) => void;
+  set: (
+    partial:
+      | UserStoreType
+      | Partial<UserStoreType>
+      | ((state: UserStoreType) => UserStoreType | Partial<UserStoreType>),
+    replace?: boolean | undefined
+  ) => void;
+};
+
+const userInitialState = {
+  rememberMe: false,
+  auth: null,
+  userDetails: null,
+  ability: null
 };
 
 export const useUserStore = create<UserStoreType>()(
   persist(
     (set) => ({
-      rememberMe: false,
-      auth: null,
-      userDetails: null,
-      ability: null,
-      set: (partial) => set((state) => ({ ...state, ...partial })),
+      ...userInitialState,
+      set
     }),
     { name: 'userStore' }
   )

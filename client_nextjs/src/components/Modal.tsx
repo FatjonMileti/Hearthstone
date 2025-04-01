@@ -54,6 +54,9 @@ export const Modal = styled(
     disableScrollLock = false,
     preMount = false
   }: ModalProps) => {
+    if (typeof document === 'undefined') {
+      return null;
+    }
     return createPortal(
       <>
         {open && !disableScrollLock && <ScrollLock />}

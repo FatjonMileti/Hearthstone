@@ -5,7 +5,7 @@ import { Button } from '../../../../components';
 import { Link } from '../../../../components';
 import request from '../../../../utils/axios';
 import { useUserStore } from '../../../../globalState/user';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../../compat/router';
 import { AxiosError } from 'axios';
 
 export const AccountSettings = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {

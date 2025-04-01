@@ -1,10 +1,10 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { News } from './DailyNews.tsx';
-import { Label } from '../../../components/Label.tsx';
-import { Icon } from '../../../components/Icon.tsx';
-import { Typography } from '../../../components/Typography.tsx';
+import { News } from './DailyNews';
+import { Label } from '../../../components/Label';
+import { Icon } from '../../../components/Icon';
+import { Typography } from '../../../components/Typography';
 
 interface NewsCardProps extends HTMLAttributes<HTMLDivElement> {
   news: News;

@@ -1,14 +1,14 @@
-import avatar0 from '../MyAccount/images/pierre at desk cream.png';
-import avatar1 from '../MyAccount/images/Dan.png';
-import avatar2 from '../MyAccount/images/Jess.png';
-import avatar3 from '../MyAccount/images/Jordan.png';
-import avatar4 from '../MyAccount/images/Mathew.png';
-import avatar5 from '../MyAccount/images/Olivia .png';
-import avatar6 from '../MyAccount/images/Reme .png';
-import avatar7 from '../MyAccount/images/Steve.png';
-import avatar8 from '../MyAccount/images/Sue.png';
-import avatar9 from '../MyAccount/images/zoe_.png';
-import avatar10 from '../MyAccount/images/antony.png';
+import avatar0 from '../../MyAccount/images/pierre at desk cream.png';
+import avatar1 from '../../MyAccount/images/Dan.png';
+import avatar2 from '../../MyAccount/images/Jess.png';
+import avatar3 from '../../MyAccount/images/Jordan.png';
+import avatar4 from '../../MyAccount/images/Mathew.png';
+import avatar5 from '../../MyAccount/images/Olivia .png';
+import avatar6 from '../../MyAccount/images/Reme .png';
+import avatar7 from '../../MyAccount/images/Steve.png';
+import avatar8 from '../../MyAccount/images/Sue.png';
+import avatar9 from '../../MyAccount/images/zoe_.png';
+import avatar10 from '../../MyAccount/images/antony.png';
 import HearthstoneLogoColored from '../../assets/svg/Hearthstone-white.svg';
 
 export type AvatarType = { image: string; backgroundColor: string };

@@ -10,7 +10,7 @@ import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
 import classNames from 'classnames';
 import { SuggestedMessages } from './SuggestedMessages';
 import { Icon, IconButton, Label } from '../../../components';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 
 export interface ChatBoxProps extends HTMLAttributes<HTMLDivElement> {
   username: string;

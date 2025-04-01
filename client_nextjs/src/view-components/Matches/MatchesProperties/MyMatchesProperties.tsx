@@ -1,32 +1,32 @@
 import { styled } from '@mui/system';
-import { HeaderLoggedIn } from '../../PagesComponents/HeaderLoggedIn/HeaderLoggedIn.tsx';
+import { HeaderLoggedIn } from '../../PagesComponents/HeaderLoggedIn/HeaderLoggedIn';
 import classNames from 'classnames';
 import { useMutation } from '@tanstack/react-query';
 
-import { ShowGlobalLoading } from '../../../components/index.ts';
+import { ShowGlobalLoading } from '../../../components/index';
 import React, { HTMLAttributes } from 'react';
 
-import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars.tsx';
+import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
 
-import { Footer } from '../../Home/Footer.tsx';
-import { useNavigate } from 'react-router-dom';
-import { Typography } from '../../../components/index.ts';
-import { Icon } from '../../../components/index.ts';
-import { Label } from '../../../components/index.ts';
-import axios from '../../../utils/axios.ts';
-import { useUserStore } from '../../../globalState/user.tsx';
+import { Footer } from '../../Home/Footer';
+import { useNavigate } from '../../../compat/router';
+import { Typography } from '../../../components/index';
+import { Icon } from '../../../components/index';
+import { Label } from '../../../components/index';
+import axios from '../../../utils/axios';
+import { useUserStore } from '../../../globalState/user';
 
-import { ViewProperty } from './ViewProperty.tsx';
-import { PropertyCard } from '../../../components/index.ts';
-import { useMatchedProperties } from './useMatchedProperties.tsx';
-import { useMatchesCount } from '../useMatchesCount.tsx';
-import { useSuggestedProperties } from '../../Suggestions/SuggestionsProperties/useSuggestedProperties.tsx';
-import { MatchedPropertyType } from '../matches.type.ts';
-import { CloseButton } from '../../../components/index.ts';
-import { Radio } from '../../../components/index.ts';
-import { Select } from '../../../components/Select/Select.tsx';
-import { Button } from '../../../components/index.ts';
-import { Modal } from '../../../components/index.ts';
+import { ViewProperty } from './ViewProperty';
+import { PropertyCard } from '../../../components/index';
+import { useMatchedProperties } from './useMatchedProperties';
+import { useMatchesCount } from '../useMatchesCount';
+import { useSuggestedProperties } from '../../Suggestions/SuggestionsProperties/useSuggestedProperties';
+import { MatchedPropertyType } from '../matches.type';
+import { CloseButton } from '../../../components/index';
+import { Radio } from '../../../components/index';
+import { Select } from '../../../components/Select/Select';
+import { Button } from '../../../components/index';
+import { Modal } from '../../../components/index';
 
 interface MyMatchesProperties extends HTMLAttributes<HTMLDivElement> {}
 

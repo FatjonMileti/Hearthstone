@@ -4,7 +4,7 @@ import { Icon } from '../../../components/Icon';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { Typography } from '../../../components/Typography';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 import { Skeleton } from '@mui/material';
 import { useSuggestedTenants } from '../../Suggestions/SugestionsTenants/useSuggestedTenants';
 import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';

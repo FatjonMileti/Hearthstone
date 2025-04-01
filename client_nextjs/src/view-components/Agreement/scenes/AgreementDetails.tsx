@@ -3,7 +3,7 @@ import { styled } from '@mui/system';
 import axios from '../../../utils/axios';
 import config from '../../../config';
 import { useUserStore } from '../../../globalState/user';
-import { useParams } from 'react-router-dom';
+import { useParams } from '../../../compat/router';
 import { EnvelopeCard } from './EnvelopeCard';
 import { DashboardHeader } from '../../AgentDashboard/components/DashboardHeader';
 

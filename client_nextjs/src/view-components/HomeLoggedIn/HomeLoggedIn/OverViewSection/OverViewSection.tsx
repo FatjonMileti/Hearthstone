@@ -1,8 +1,8 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { DashboardOverview } from './DashboardOverview.tsx';
-import { GetNoticed } from './GetNoticed.tsx';
+import { DashboardOverview } from './DashboardOverview';
+import { GetNoticed } from './GetNoticed';
 
 export const motionPropsAnimatePresence = {
   initial: { opacity: 0 },

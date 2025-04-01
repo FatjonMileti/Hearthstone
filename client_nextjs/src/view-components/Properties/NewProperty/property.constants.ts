@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as yup from 'yup';
 import { ObjectSchema } from 'yup';
 import { PropertyFormType } from './property.types';

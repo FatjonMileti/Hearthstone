@@ -1,13 +1,13 @@
 import { styled } from '@mui/system';
-import { Typography } from '../../../components/Typography';
-import { YourProperty } from '../../PagesComponents/YourProperty';
+import { Typography } from '../../../../components/Typography';
+import { YourProperty } from '../../../PagesComponents/YourProperty';
 import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { EditPropertyModal } from '../../Properties/NewProperty/EditPropertyModal';
-import { Icon } from '../../../components/Icon';
-import { usePropertyDetailsHook } from '../../HomeLoggedIn/hooks/usePropertyDetails.hook';
-import { ShowGlobalLoading } from '../../../components/ShowGlobalLoading';
+import { EditPropertyModal } from '../../../Properties/NewProperty/EditPropertyModal';
+import { Icon } from '../../../../components/Icon';
+import { usePropertyDetailsHook } from '../../../HomeLoggedIn/HomeLoggedIn/hooks/usePropertyDetails.hook';
+import { ShowGlobalLoading } from '../../../../components/ShowGlobalLoading';
 
 export const DashboardYourProperties = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   const [showEditProperty, setShowEditProperty] = React.useState<string | undefined>(undefined);

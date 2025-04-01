@@ -1,30 +1,30 @@
 import React, { HTMLAttributes } from 'react';
 import { styled } from '@mui/system';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from '../../compat/router';
 import { useQuery } from '@tanstack/react-query';
 import classNames from 'classnames';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { Typography, ShowGlobalLoading, Button } from '../../components/index.ts';
+import { Typography, ShowGlobalLoading, Button } from '../../components/index';
 
-import { Conversation } from './Conversation.tsx';
-import { ChatBox } from './ChatBox/ChatBox.tsx';
-import { HeaderLoggedIn } from '../PagesComponents/HeaderLoggedIn/HeaderLoggedIn.tsx';
-import { MessagesProperties } from './Messages.Properties.tsx';
+import { Conversation } from './Conversation';
+import { ChatBox } from './ChatBox/ChatBox';
+import { HeaderLoggedIn } from '../PagesComponents/HeaderLoggedIn/HeaderLoggedIn';
+import { MessagesProperties } from './Messages.Properties';
 
-import axios from '../../utils/axios.ts';
+import axios from '../../utils/axios';
 
-import SocketContext from '../../context/SocketContext.tsx';
-import { useUserStore } from '../../globalState/user.tsx';
-import { useNotificationsStore } from '../../globalState/notifications.ts';
+import SocketContext from '../../context/SocketContext';
+import { useUserStore } from '../../globalState/user';
+import { useNotificationsStore } from '../../globalState/notifications';
 
-import { IMessageItem, IRoom } from './messages.interface.ts';
+import { IMessageItem, IRoom } from './messages.interface';
 
 import noMessages from './noMessages.png';
-import { Footer } from '../Home/Footer.tsx';
+import { Footer } from '../Home/Footer';
 
-import { MatchDetails } from './MatchDetails/MatchDetails.tsx';
-import { HearthstoneAssistance } from './HearthstoneAssistance.tsx';
+import { MatchDetails } from './MatchDetails/MatchDetails';
+import { HearthstoneAssistance } from './LostfishAssistance';
 
 export const Messages = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   const userStore = useUserStore();

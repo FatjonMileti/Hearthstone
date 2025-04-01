@@ -1,9 +1,9 @@
 import { HTMLAttributes } from 'react';
 import { styled } from '@mui/system';
-import { Avatar, Icon, Label, Typography } from '../../components/index.ts';
-import { getAvatarFormIndex } from '../HomeLoggedIn/avatars.tsx';
-import { useUserStore } from '../../globalState/user.tsx';
-import { IRoom } from './messages.interface.ts';
+import { Avatar, Icon, Label, Typography } from '../../components/index';
+import { getAvatarFormIndex } from '../HomeLoggedIn/avatars';
+import { useUserStore } from '../../globalState/user';
+import { IRoom } from './messages.interface';
 
 interface HearthstoneAssistanceProps extends HTMLAttributes<HTMLDivElement> {
   room: IRoom;

@@ -1,9 +1,9 @@
 import { styled } from '@mui/system';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { Icon, IconProps } from './Icon.tsx';
-import { Typography } from './Typography.tsx';
-import { MenuCounter } from './MenuCounter.tsx';
+import { Icon, IconProps } from './Icon';
+import { Typography } from './Typography';
+import { MenuCounter } from './MenuCounter';
 
 export interface AccountItemProps extends HTMLAttributes<HTMLDivElement> {
   icon: IconProps['icon'];

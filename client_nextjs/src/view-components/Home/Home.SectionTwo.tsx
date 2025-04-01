@@ -2,11 +2,11 @@ import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { Typography } from '../../components/Typography.tsx';
+import { Typography } from '../../components/Typography';
 
 import image from './video_screenshot.png';
 import multimedia from './start.svg';
-import config from '../../config.ts';
+import config from '../../config';
 
 export const SectionTwo = styled(
   React.forwardRef<HTMLDivElement>(({ className }: HTMLAttributes<HTMLDivElement>, ref) => {

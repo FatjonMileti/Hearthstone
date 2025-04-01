@@ -1,7 +1,7 @@
-import { useProfileStore } from '../../globalState/profile.tsx';
-import { Role } from '../../enums.ts';
-import { MatchesForTenant } from './MatchesForTenant/MatchesForTenant.tsx';
-import { MatchesForLandlord } from './MatchesForLandlord/MatchesForLandlord.tsx';
+import { useProfileStore } from '../../globalState/profile';
+import { Role } from '../../enums';
+import { MatchesForTenant } from './MatchesForTenant/MatchesForTenant';
+import { MatchesForLandlord } from './MatchesForLandlord/MatchesForLandlord';
 
 export const Matches = () => {
   const profileStore = useProfileStore();

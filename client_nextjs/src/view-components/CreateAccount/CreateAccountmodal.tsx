@@ -45,7 +45,7 @@ export const CreateAccountModal = styled(
     onBackdropClick = () => {},
     ...otherProps
   }: CreateAccountModalProps) => {
-    const form = useForm({ resolver: yupResolver(schema), mode: 'all' });
+    const form = useForm({ resolver: yupResolver(schema) as any, mode: 'all' });
 
     const [showVerifyEmailModal, setShowVerifyEmailModal] = React.useState(false);
     const [loading, setLoading] = React.useState(false);

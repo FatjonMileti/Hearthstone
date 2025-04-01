@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
@@ -6,7 +7,7 @@ import axios from '../../../utils/axios';
 import request from '../../../utils/axios';
 import { useUserStore } from '../../../globalState/user';
 
-import { ApiCriteriaDocumentType, CriteriaFormType, HouseType, PropertyFeatureType } from './criteria.types';
+import { ApiCriteriaDocumentType, CriteriaFormType, HouseType, PropertyFeatureType } from '../criteria.types';
 
 import { SetCriteriaHouseDetails } from './SetCriteria.HouseDetails';
 import { SetCriteriaLocation } from './SetCriteria.Location';

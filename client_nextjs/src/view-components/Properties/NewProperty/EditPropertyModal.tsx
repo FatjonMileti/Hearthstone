@@ -1,21 +1,21 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
 
-import { Modal } from '../../../components/Modal.tsx';
-import { Typography } from '../../../components/Typography.tsx';
-import { Button } from '../../../components/Button.tsx';
-import { Icon } from '../../../components/Icon.tsx';
-import { CloseButton } from '../../../components/CloseButton.tsx';
+import { Modal } from '../../../components/Modal';
+import { Typography } from '../../../components/Typography';
+import { Button } from '../../../components/Button';
+import { Icon } from '../../../components/Icon';
+import { CloseButton } from '../../../components/CloseButton';
 
-import { PropertyForm } from './PropertyForm.tsx';
-import { usePropertyForm } from './usePropertyForm.tsx';
-import axios from '../../../utils/axios.ts';
-import { ApiPropertyDocumentType } from './property.types.ts';
-import { Furnished, OutsideSpace, PropertyType } from './property.constants.ts';
-import { OtherSpecificPropertyFeature } from '../../SetCriteria/criteria.types.ts';
-import { useUserStore } from '../../../globalState/user.tsx';
-import { ShowGlobalLoading } from '../../../components/ShowGlobalLoading.tsx';
-import { RoundAction } from '../../../components/RoundAction.tsx';
+import { PropertyForm } from './PropertyForm';
+import { usePropertyForm } from './usePropertyForm';
+import axios from '../../../utils/axios';
+import { ApiPropertyDocumentType } from './property.types';
+import { Furnished, OutsideSpace, PropertyType } from './property.constants';
+import { OtherSpecificPropertyFeature } from '../../SetCriteria/criteria.types';
+import { useUserStore } from '../../../globalState/user';
+import { ShowGlobalLoading } from '../../../components/ShowGlobalLoading';
+import { RoundAction } from '../../../components/RoundAction';
 
 export interface EditPropertyModalProps extends HTMLAttributes<HTMLDivElement> {
   showStore: [boolean, (show: boolean) => void];

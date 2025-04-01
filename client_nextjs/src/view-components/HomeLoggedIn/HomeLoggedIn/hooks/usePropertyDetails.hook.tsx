@@ -1,7 +1,7 @@
-import { useUserStore } from '../../../globalState/user';
-import axiosWithToken from '../../../utils/axios';
+import { useUserStore } from '../../../../globalState/user';
+import axiosWithToken from '../../../../utils/axios';
 import { useQuery } from '@tanstack/react-query';
-import { ApiPropertyDocumentType } from '../../Properties/NewProperty/property.types';
+import { ApiPropertyDocumentType } from '../../../Properties/NewProperty/property.types';
 
 export type TPropertyDetails = {
   property: string;

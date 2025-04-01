@@ -4,19 +4,19 @@ import classNames from 'classnames';
 import { AnimatePresence } from 'framer-motion';
 import { UseFormReturn } from 'react-hook-form';
 
-import { Modal, ModalProps } from '../../components/Modal.tsx';
-import { Typography } from '../../components/Typography.tsx';
-import { Label } from '../../components/Label.tsx';
-import { Icon } from '../../components/Icon.tsx';
+import { Modal, ModalProps } from '../../components/Modal';
+import { Typography } from '../../components/Typography';
+import { Label } from '../../components/Label';
+import { Icon } from '../../components/Icon';
 
-import { SetCriteriaLocation } from './SetCriteria/SetCriteria.Location.tsx';
-import { SetCriteriaHouseType } from './SetCriteria/SetCriteria.HouseType.tsx';
-import { SetCriteriaBudget } from './SetCriteria/SetCriteria.Budged.tsx';
-import { SetCriteriaHouseDetails } from './SetCriteria/SetCriteria.HouseDetails.tsx';
+import { SetCriteriaLocation } from './SetCriteria/SetCriteria.Location';
+import { SetCriteriaHouseType } from './SetCriteria/SetCriteria.HouseType';
+import { SetCriteriaBudget } from './SetCriteria/SetCriteria.Budged';
+import { SetCriteriaHouseDetails } from './SetCriteria/SetCriteria.HouseDetails';
 
-import { CriteriaFormType } from './criteria.types.ts';
-import { RoundAction } from '../../components/RoundAction.tsx';
-import { useCriteriaWithoutAccountStore } from '../../globalState/useCriteriaWithoutAccount.ts';
+import { CriteriaFormType } from './criteria.types';
+import { RoundAction } from '../../components/RoundAction';
+import { useCriteriaWithoutAccountStore } from '../../globalState/useCriteriaWithoutAccount';
 
 const tabLabels = ['Location', 'House type', 'Budget'];
 

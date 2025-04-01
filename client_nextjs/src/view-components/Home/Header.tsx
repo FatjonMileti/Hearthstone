@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../compat/router';
 
 import LogoLostFishColored from '../../assets/svg/LogoLostFishColored.svg';
 import { Label } from '../../components';

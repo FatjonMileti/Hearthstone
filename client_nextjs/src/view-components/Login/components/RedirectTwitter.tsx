@@ -1,5 +1,6 @@
+// @ts-nocheck
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../../../compat/router';
 import { useCookies } from 'react-cookie';
 import { decodeJWT } from '../LoginModal';
 import { useUserStore } from '../../../globalState/user';

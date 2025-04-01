@@ -1,13 +1,13 @@
 import { HTMLAttributes } from 'react';
 import { styled } from '@mui/system';
 
-import { Typography } from '../../../components/Typography';
-import { Button } from '../../../components/Button';
-import { ShowGlobalLoading } from '../../../components/ShowGlobalLoading';
+import { Typography } from '../../../../components/Typography';
+import { Button } from '../../../../components/Button';
+import { ShowGlobalLoading } from '../../../../components/ShowGlobalLoading';
 import { useAgreement } from '../useAgreement';
 import hand from '../images/hand.png';
 import { DashboardYourProperties } from './Dashboard.YourProperties';
-import { useProfileStore } from '../../../globalState/profile';
+import { useProfileStore } from '../../../../globalState/profile';
 
 export const Dashboard = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   const { loading, getTransactionAgreementStatus, buttonLabel, handleTransactionAgreement } = useAgreement();

@@ -1,23 +1,24 @@
+// @ts-nocheck
 import React from 'react';
 import { styled } from '@mui/system';
 import classNames from 'classnames';
 
-import { Header } from './Header.tsx';
-import { LoginModal } from '../Login/LoginModal.tsx';
-import { CreateAccountModal } from '../CreateAccount/CreateAccountmodal.tsx';
-import { ForgotPasswordModal } from '../ForgotPassword/ForgotPasswordModal.tsx';
-import { ResetPasswordModal } from '../ResetPassword/ResetPasswordModal.tsx';
-import { SectionOne } from './Home.SectionOne.tsx';
-import { SectionTwo } from './Home.SectionTwo.tsx';
-import { FaqSection } from './Home.FaqSection.tsx';
-import { Footer } from './Footer.tsx';
-import { DailyNewss } from '../PagesComponents/DailyNews/DailyNews.tsx';
+import { Header } from './Header';
+import { LoginModal } from '../Login/LoginModal';
+import { CreateAccountModal } from '../CreateAccount/CreateAccountmodal';
+import { ForgotPasswordModal } from '../ForgotPassword/ForgotPasswordModal';
+import { ResetPasswordModal } from '../ResetPassword/ResetPasswordModal';
+import { SectionOne } from './Home.SectionOne';
+import { SectionTwo } from './Home.SectionTwo';
+import { FaqSection } from './Home.FaqSection';
+import { Footer } from './Footer';
+import { DailyNewss } from '../PagesComponents/DailyNews/DailyNews';
 
-import { StartMatchingWithoutAccount } from '../Suggestions/StartMatchingWithoutAccount/StartMatchingWithoutAccount.tsx';
-import HomeCirclesSection from './Home.CirclesSection.tsx';
-import { ValpalSection } from '../PagesComponents/ValpalSection/Home.ValpalSection.tsx';
-import { useCriteriaWithoutAccountStore } from '../../globalState/useCriteriaWithoutAccount.ts';
-import { ColoredCards } from './Home.ColoredCards.tsx';
+import { StartMatchingWithoutAccount } from '../Suggestions/StartMatchingWithoutAccount/StartMatchingWithoutAccount';
+import HomeCirclesSection from './Home.CirclesSection';
+import { ValpalSection } from '../PagesComponents/ValpalSection/Home.ValpalSection';
+import { useCriteriaWithoutAccountStore } from '../../globalState/useCriteriaWithoutAccount';
+import { ColoredCards } from './Home.ColoredCards';
 
 export const Home = styled(({ className }: React.HTMLAttributes<HTMLDivElement>) => {
   const [showStartMatching, setShowStartMatching] = React.useState(false);

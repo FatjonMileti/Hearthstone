@@ -1,33 +1,33 @@
 import { styled } from '@mui/system';
 import React, { HTMLAttributes } from 'react';
-import { NavLink, Route, Routes, useNavigate } from 'react-router-dom';
-import { Typography } from '../../components/index.ts';
+import { NavLink, Route, Routes, useNavigate } from '../../../compat/router';
+import { Typography } from '../../../components/index';
 
-import { Dashboard } from './Dashboard/Dashboard.tsx';
-import { ProfileDetails } from './ProfileDetails.tsx';
-import { TransactionAgreement } from './TransactionAgreement.tsx';
-import { TermsAndConditions } from './TermsAndConditions.tsx';
-import { HelpAndSupport } from './HelpAndSupport.tsx';
-import { HeaderLoggedIn } from '../PagesComponents/HeaderLoggedIn/HeaderLoggedIn.tsx';
-import { Footer } from '../Home/Footer.tsx';
+import { Dashboard } from './Dashboard/Dashboard';
+import { ProfileDetails } from './ProfileDetails';
+import { TransactionAgreement } from './TransactionAgreement';
+import { TermsAndConditions } from './TermsAndConditions';
+import { HelpAndSupport } from './HelpAndSupport';
+import { HeaderLoggedIn } from '../../PagesComponents/HeaderLoggedIn/HeaderLoggedIn';
+import { Footer } from '../../Home/Footer';
 
-import request from '../../utils/axios.ts';
+import request from '../../../utils/axios';
 
-import { useUserStore } from '../../globalState/user.tsx';
-import { useProfileStore } from '../../globalState/profile.tsx';
+import { useUserStore } from '../../../globalState/user';
+import { useProfileStore } from '../../../globalState/profile';
 
-import { ImproveTrustScoreModal } from '../PagesComponents/ImproveTrustScoreModal.tsx';
-import { SetCriteria } from '../SetCriteria/SetCriteria/SetCriteria.tsx';
-import { Properties } from './Properties/Properties.tsx';
-import { Solicitors } from './Solicitors.tsx';
-import { AccountItem } from '../../components/index.ts';
-import { IconProps } from '../../components/Icon.tsx';
-import { AccountDetails } from './AccountDetails.tsx';
-import { PlanAndPayment } from './PlanAndPayment.tsx';
-import { SecurityDetails } from './SecurityDetails.tsx';
-import { CommunicationSettings } from './CommunicationSettings.tsx';
-import { PrivacyAndSharing } from './PrivacyAndSharing.tsx';
-import { LinearProgress } from '../../components/LinearProgress.tsx';
+import { ImproveTrustScoreModal } from '../../PagesComponents/ImproveTrustScoreModal';
+import { SetCriteria } from '../../SetCriteria/SetCriteria/SetCriteria';
+import { Properties } from './Properties/Properties';
+import { Solicitors } from './Solicitors';
+import { AccountItem } from '../../../components/index';
+import { IconProps } from '../../../components/Icon';
+import { AccountDetails } from './AccountDetails';
+import { PlanAndPayment } from './PlanAndPayment';
+import { SecurityDetails } from './SecurityDetails';
+import { CommunicationSettings } from './CommunicationSettings';
+import { PrivacyAndSharing } from './PrivacyAndSharing';
+import { LinearProgress } from '../../../components/LinearProgress';
 import verified from './images/verified.svg';
 
 interface SubMenuItem {

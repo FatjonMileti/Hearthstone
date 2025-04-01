@@ -1,7 +1,7 @@
 import { styled } from '@mui/system';
 import classNames from 'classnames';
 import { HTMLAttributes } from 'react';
-import { Typography } from '../../components/Typography.tsx';
+import { Typography } from '../../components/Typography';
 
 const HomeCirclesSection = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   return (

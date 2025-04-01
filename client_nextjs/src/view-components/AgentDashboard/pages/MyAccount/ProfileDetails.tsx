@@ -22,7 +22,8 @@ const userSchema = yup.object().shape({
   last_name: yup.string().required('Last name is required'),
   email: yup.string().required('Email is required'),
   phone: yup.string().nullable(),
-  description: yup.string().nullable()
+  description: yup.string().nullable(),
+  avatar: yup.string().nullable(),
 });
 
 interface ProfileDetails {
@@ -42,7 +43,7 @@ export const ProfileDetails = styled(({ className }: HTMLAttributes<HTMLDivEleme
   const { userDetails, auth } = useUserStore();
 
   const profileDetailsForm = useForm<ProfileDetails>({
-    resolver: yupResolver(userSchema),
+    resolver: yupResolver(userSchema) as any,
     defaultValues: {
       first_name: '',
       last_name: '',

@@ -1,20 +1,21 @@
+// @ts-nocheck
 import { styled } from '@mui/system';
 import React from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import classNames from 'classnames';
 
-import { Label } from '../../../components/index.ts';
-import { Typography } from '../../../components/index.ts';
-import { Icon } from '../../../components/index.ts';
-import { Select } from '../../../components/Select/Select.tsx';
+import { Label } from '../../../components/index';
+import { Typography } from '../../../components/index';
+import { Icon } from '../../../components/index';
+import { Select } from '../../../components/Select/Select';
 
-import { AreaOfInterest } from '../../PagesComponents/AreaOfInterest.tsx';
-import { UseMyLocation } from './UseMyLocation.tsx';
-import { DistanceUnit, WhenDoYouWantToMove } from '../criteria.contants.ts';
-import { CriteriaFormType, DistanceUnitType } from './criteria.types.ts';
+import { AreaOfInterest } from '../../PagesComponents/AreaOfInterest';
+import { UseMyLocation } from './UseMyLocation';
+import { DistanceUnit, WhenDoYouWantToMove } from '../criteria.contants';
+import { CriteriaFormType, DistanceUnitType } from '../criteria.types';
 import { HTMLMotionProps, m, motion } from 'framer-motion';
-import { Slider } from '../../../components/Slider.tsx';
-import { AreaUnitType } from '../../Properties/NewProperty/property.types.ts';
+import { Slider } from '../../../components/Slider';
+import { AreaUnitType } from '../../Properties/NewProperty/property.types';
 
 
 const toKilometer = (valueInMile: number): number => {

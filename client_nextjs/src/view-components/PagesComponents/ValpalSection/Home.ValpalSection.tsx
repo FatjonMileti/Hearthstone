@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import valpal from './valpal.png';
 import backgroundImage from './valpal-background.jpeg';
 import backgroundColor from './valpal-background-color.jpeg';
-import { Typography } from '../../../components/Typography.tsx';
-import { Icon } from '../../../components/Icon.tsx';
-import { Label } from '../../../components/Label.tsx';
+import { Typography } from '../../../components/Typography';
+import { Icon } from '../../../components/Icon';
+import { Label } from '../../../components/Label';
 
 export const ValpalSection = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   return (
