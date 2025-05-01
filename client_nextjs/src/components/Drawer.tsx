@@ -17,6 +17,9 @@ export const Drawer = styled(
       closed: { x: '100%' }
     };
 
+    if (typeof document === 'undefined') {
+      return null;
+    }
     return createPortal(
       <>
         {open && !disableScrollLock && <ScrollLock />}

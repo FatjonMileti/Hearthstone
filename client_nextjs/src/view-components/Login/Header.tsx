@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import HearthstoneLogoColored from '../../assets/svg/LogoHearthstoneColored.svg';
+import HearthstoneLogoColored from '../../assets/svg/LogoLostFishColored.svg';
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 

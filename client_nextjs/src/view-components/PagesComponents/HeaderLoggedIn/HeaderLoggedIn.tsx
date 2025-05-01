@@ -11,7 +11,7 @@ import { getAvatarFormIndex } from '../../HomeLoggedIn/avatars';
 import { Role } from '../../../enums';
 import { MenuItem } from './MenuItem';
 
-import HearthstoneLogoColored from '../../../assets/svg/HearthstoneLogo.svg';
+import HearthstoneLogoColored from '../../../assets/svg/LogoLostFishColored.svg';
 import { NotificationsDrawer } from '../../Notifications/NotificationsDrawer';
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}

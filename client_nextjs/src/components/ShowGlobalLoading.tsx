@@ -65,6 +65,9 @@ export const animation = {
 export const GlobalLoading = styled(({ className }: HTMLAttributes<HTMLDivElement>) => {
   const backdropStore = useBackdropStore();
 
+  if (typeof document === 'undefined') {
+    return null;
+  }
   return createPortal(
     <>
       <AnimatePresence>

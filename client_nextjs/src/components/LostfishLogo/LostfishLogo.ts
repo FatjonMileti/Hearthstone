@@ -1,3 +1,3 @@
-import HearthstoneFullLogoBlack from './HearthstoneFullLogoBlack.svg';
+import HearthstoneFullLogoBlack from './LostfishFullLogoBlack.svg';
 
 export { HearthstoneFullLogoBlack };

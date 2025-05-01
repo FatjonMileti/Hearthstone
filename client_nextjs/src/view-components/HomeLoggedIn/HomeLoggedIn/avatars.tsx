@@ -9,7 +9,7 @@ import avatar7 from '../../MyAccount/images/Steve.png';
 import avatar8 from '../../MyAccount/images/Sue.png';
 import avatar9 from '../../MyAccount/images/zoe_.png';
 import avatar10 from '../../MyAccount/images/antony.png';
-import HearthstoneLogoColored from '../../assets/svg/Hearthstone-white.svg';
+import HearthstoneLogoColored from '../../../assets/svg/lostfish-white.svg';
 
 export type AvatarType = { image: string; backgroundColor: string };
 
