@@ -356,9 +356,9 @@ export const SetCriteria = styled(
           <div className='criteria-body'>
             {
               [
-                <SetCriteriaLocation form={mainForm} />,
-                <SetCriteriaHouseType form={mainForm} />,
-                <SetCriteriaBudget form={mainForm} />,
+                <SetCriteriaLocation key="location" form={mainForm} />,
+                <SetCriteriaHouseType key="housetype" form={mainForm} />,
+                <SetCriteriaBudget key="budget" form={mainForm} />,
                 // <SetCriteriaHouseDetails form={mainForm} />
               ][selectedTab]
             }

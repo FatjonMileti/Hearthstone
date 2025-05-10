@@ -12,7 +12,7 @@ interface MapProps extends HTMLAttributes<HTMLDivElement> {
 export const Map = styled(({ address, className }: MapProps) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_KEY || ''
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY || ''
   });
 
   const mapRef = React.useRef<any>(undefined);
