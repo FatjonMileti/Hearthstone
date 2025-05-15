@@ -1,4 +1,4 @@
-# lost.fish.frontend-next (client_nextjs)
+# Hearthstone (client_nextjs)
 
 Next.js (App Router) port of `client_react` (Vite + react-router). Same MUI theme, zustand stores, socket.io client contract with `server_fastapi`.
 
@@ -47,5 +47,3 @@ Feature components live under `src/view-components/**`; page files currently mou
 - `reactjs-social-login` and portal components (`Modal`, `Drawer`, `GlobalLoading`) are client-only / guarded for SSR.
 - Image imports are typed as `string` (vite parity) via patched `node_modules/next/image-types/global.d.ts`.
 - `tsconfig` relaxes `strictNullChecks`/`noImplicitAny` to match `client_react`.
-
-See `PORTING_NOTES.md` and `TODO.md` for the full audit.

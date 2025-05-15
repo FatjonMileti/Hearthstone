@@ -6,10 +6,6 @@
 # Node artifact files
 node_modules/
 
-client_react/
-client_react/node_modules/
-client_react/build/
-
 client_nextjs/node_modules/
 client_nextjs/build/
 client_nextjs/TODO.md
@@ -59,5 +55,4 @@ Thumbs.db
 # .env file
 .env
 
-client_nextjs/TODO.md
 client_nextjs/TODO.md
