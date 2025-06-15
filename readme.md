@@ -1,118 +1,49 @@
 # Hearthstone
 
-### We have both frontend and backend in the same directory
+Rental marketplace matching tenants with landlords (plus agents and onboarding users): landlords publish properties, tenants define search criteria, a similarity engine scores matches, and both sides negotiate over realtime chat with document exchange, offers and DocuSign e-signing.
 
-## Development environment
+## Repository layout
 
-We are using `concurrently` to run applications in development mode.
-To run them use the command below.
+| Path | Description |
+| --- | --- |
+| `client_nextjs/` | Web client — Next.js 14 (App Router), TypeScript, MUI, zustand, socket.io-client |
+| `server_fastapi/` | API — FastAPI, MongoDB, Socket.IO realtime, DocuSign, email |
+| `tools/` | Deploy script (`deploy-script.sh`) |
 
-```sh
-npm i
-npm run both
+The legacy Vite/react-router client (`client_react`) and the legacy Node server (`server_node`) have been replaced by `client_nextjs` and `server_fastapi` (port history is in each package's `PORTING_NOTES.md`).
+
+## Development
+
+Run backend (from `server_fastapi/`):
+
+```bash
+cp .env.example .env      # fill secrets (JWT, DB, mail, maps, docusign)
+pip install -e ".[dev]"
+uvicorn app.main:app --reload --port 3000        # or --port 3001 to match client default
+# Swagger: http://localhost:3000/docs
 ```
 
-This will run both client and server in realtime we can see changes during live coding.
-Client is running by default with `react-scripts` and Server with `nodemon`.
+Run frontend (from `client_nextjs/`):
 
-## Client
-
-# Hearthstone Dashboard
-
-## VSCode Development requirements
-
-Install and enable the TSLint extension
-from https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin
-
-Install and enable the Prettier extension
-from https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-
-## Uses
-
-- React JS
-- [MUI - material design](https://mui.com)
-- Typescript
-- [Create React App](https://github.com/facebook/create-react-app)
-- React Router
-
-# Backend (Hearthstone API)
-
-```sh
-npm i
-npm start
-
-visit http://localhost:3000/docs
-visit http://localhost:3000/form
+```bash
+cp .env.local.example .env.local
+npm install
+npm run dev               # http://localhost:3000
 ```
 
-## VSCode Development requirements
+`docker compose up` in `server_fastapi/` starts api + mongo + redis.
 
-Install and enable the TSLint extension
-from https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin
+## Quality gates
 
-Install and enable the Prettier extension
-from https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+```bash
+# client
+cd client_nextjs && npm run lint && npm run type-check && npm run test && npm run build
 
-## Uses
-
-- dotenv
-- compression
-- helmet
-- typescript
-- mongodb
-- cookies
-- session
-- csrf
-- file upload
-- rate-limiter
-- npm audit clean
-- CRUD endpoints
-- apidoc
-- new relic (basic integration)
-- dockerfile (basic)
-
-### ⚠️ All non-typescript files need to be at **root** level. Example: `/uploads`, `/docs` and `/views`
-
+# server
+cd server_fastapi && pytest -q && ruff check . && mypy .
 ```
-./src
-    ./api - api endpoints grouped in controllers
-    ./bin/www - entrypoint
-    ./data - typescript interfaces and mongoose schemas
-    ./middleware - general app middlewares
-    ./routes - MVC routes that end in res.render
-    ./app.ts - main app file
-```
-
-## Dev
-
-copy `.env.example` to `.env`
-
-Run mongodb
-
-Run with **nodemon**: `npm run dev`
-
-Add a default user `npm run cli`
 
 ## Docs
 
-Run: `npm run docs`
-
-Visit: http://localhost:3000/docs
-
-## Production
-
-Run: `npm run build`. The `/dist` folder gets populated with the javascript version.
-
-To run the production version: `node ./dist/bin/www`
-
-## Mongodb server configuration
-
-To turn off profiling `nano /etc/mongod.conf` and set
-
-```
-operationProfiling:
- mode: off
- slowOpThresholdMs: 10800000
-setParameter:
- cursorTimeoutMillis: 10800000
-```
+- API reference, data model, request flows: `server_fastapi/README.md`
+- Client architecture, route mapping, env mapping: `client_nextjs/README.md`, `client_nextjs/PORTING_NOTES.md`, `client_nextjs/TODO.md`

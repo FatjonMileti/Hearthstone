@@ -3,8 +3,8 @@
     "concurrently": "^7.6.0"
   },
   "scripts": {
-    "server": "npm start --prefix server",
-    "client": "npm start --prefix client",
+    "server": "cd server_fastapi && uvicorn app.main:app --reload --port 3001",
+    "client": "npm run dev --prefix client_nextjs",
     "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "devDependencies": {
