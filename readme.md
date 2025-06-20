@@ -46,4 +46,4 @@ cd server_fastapi && pytest -q && ruff check . && mypy .
 ## Docs
 
 - API reference, data model, request flows: `server_fastapi/README.md`
-- Client architecture, route mapping, env mapping: `client_nextjs/README.md`, `client_nextjs/PORTING_NOTES.md`, `client_nextjs/TODO.md`
+- Client architecture, route mapping, env mapping: `client_nextjs/README.md`
